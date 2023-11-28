@@ -9,7 +9,6 @@
   </template>
   
   <style scoped>
-    /* Styles spécifiques au composant Header */
     .logo-container {
       display: flex;
       justify-content: space-between;
@@ -17,10 +16,10 @@
     }
   
     .logo-large {
-      width: 100px; /* Ajustez la taille selon vos besoins */
+      width: 100px; 
     }
   
     .logo-small {
-      width: 50px; /* Ajustez la taille selon vos besoins */
+      width: 50px; 
     }
   </style>
