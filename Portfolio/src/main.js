@@ -2,10 +2,16 @@ import './assets/main.css'
 
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router'
+import { createRouter, createWebHistory } from 'vue-router'
 
-const app = createApp(App)
+const routes = [
+  { path: '/', component: App },
+  { path: '/:pathMatch(.*)*', name: 'not-found', component: () => import('./views/NotFound.vue') },
+]
 
-app.use(router)
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+})
 
-app.mount('#app')
+createApp(App).use(router).mount('#app')
