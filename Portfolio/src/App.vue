@@ -26,7 +26,6 @@ export default {
   <div>
     <Header />
     <Navigation />
-    <!-- Votre contenu principal ici -->
     <TitleSubtitle title="Portfolio de Pichonneau Théo" subtitle="Développeur web et web mobile " />
     <Introduction introduction="Présentation" />
     <Project projectTitle="CV" imageSrc="Portfolio\src\assets\CV.PNG" />
