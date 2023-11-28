@@ -26,9 +26,8 @@ export default {
   <div>
     <Header />
     <Navigation />
-    <!-- Votre contenu principal ici -->
-    <TitleSubtitle title="Mon Portfolio" subtitle="Découvrez mes projets et compétences" />
-    <Introduction introduction="Bienvenue sur mon portfolio. Je suis passionné par le développement web et j'aime créer des projets uniques." />
+    <TitleSubtitle title="Portfolio de Pichonneau Théo" subtitle="Développeur web et web mobile " />
+    <Introduction introduction="Présentation" />
     <Project projectTitle="CV" imageSrc="Portfolio\src\assets\CV.PNG" />
     <Project projectTitle="Cahier des charges" imageSrc="Portfolio\src\assets\Cahier des charges.PNG" />
     <Project projectTitle="Dynamiser un espace commentaire" imageSrc="Portfolio\src\assets\Dynamiser un espace commentaire.PNG" />
