@@ -9,6 +9,7 @@ import Title from "@/components/Title.vue";
 import Introduction from "@/components/Introduction.vue";
 import Projects from "@/components/Projects.vue";
 import ContactForm from "@/components/ContactForm.vue";
+import Footer from "@/components/Footer.vue"
 
 export default {
   components: {
@@ -18,6 +19,7 @@ export default {
     Introduction,
     Projects,
     ContactForm,
+    Footer,
   },
 };
 </script>
@@ -32,6 +34,7 @@ export default {
     <Projects projectTitle="Cahier des charges" imageSrc="/src/assets/images/Cahier-des-charges.PNG" />
     <Projects projectTitle="Dynamiser un espace commentaire" imageSrc="/src/assets/images/Dynamiser-un-espace-commentaire.PNG"/>
     <ContactForm />
+    <Footer/>  
   </div>
 </template>
 
