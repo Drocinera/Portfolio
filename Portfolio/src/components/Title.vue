@@ -1,7 +1,7 @@
 <template>
     <div>
-      <h2>{{ title }}</h2>
-      <h3>{{ subtitle }}</h3>
+      <h1>{{ title }}</h1>
+      <h2>{{ subtitle }}</h2>
     </div>
   </template>
   
@@ -13,3 +13,9 @@
     },
   };
   </script>
+
+  <style scoped>
+  h1, h2 {
+    font-family: 'Raleway', sans-serif;
+  }
+</style>

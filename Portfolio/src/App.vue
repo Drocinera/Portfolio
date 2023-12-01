@@ -25,9 +25,14 @@ export default {
 </script>
 
 <template>
-  <div>
+  <div class="menu-container">
     <Header />
+    <div class="citation-container">
+      <img src="/src/assets/images/Citation-portfolio.PNG" alt="Citation indiquant: La logique vous mènera d'un point A à un point B. L'imagination vous mènera partout. (Albert Einstein)" class="citation" >
+    </div>
     <Navigation />
+  </div>
+  <div>
     <Title title="Portfolio de Pichonneau Théo" subtitle="Développeur web et web mobile " />
     <Introduction introduction="Présentation" />
     <Projects projectTitle="CV" imageSrc="/src/assets/images/CV.PNG"/>
@@ -38,3 +43,19 @@ export default {
   </div>
 </template>
 
+<style>
+  @import "./assets/main.css";
+
+  .menu-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:bottom;
+    background-color: #0f056b; /*Bleu nuit*/
+  }
+
+  .citation {
+    height: 10em;
+    width: 30em;
+  }
+</style>
