@@ -11,10 +11,11 @@
 
     nav {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;;
       
     }
     .nav-item {
+      font-size: small;
       padding: 10px;
       border: 1px solid #ddd;
       margin: 5px;

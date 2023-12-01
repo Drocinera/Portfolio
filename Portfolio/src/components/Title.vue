@@ -17,5 +17,8 @@
   <style scoped>
   h1, h2 {
     font-family: 'Raleway', sans-serif;
+    text-align: center;
+    color: #ffd700;
+    text-shadow: 3px 3px 3px #0f056b;
   }
 </style>
