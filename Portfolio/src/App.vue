@@ -57,5 +57,7 @@ export default {
   .citation {
     height: 10em;
     width: 30em;
+    padding-right: 3em;
+  
   }
 </style>
