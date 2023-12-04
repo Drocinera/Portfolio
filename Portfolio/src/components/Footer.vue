@@ -7,11 +7,11 @@
         <a href="https://github.com/Drocinera" target="_blank" rel="noopener noreferrer">
             <img src="/src/assets/images/signe-github.png" alt="Logo Github par Dave Gandy"> 
         </a>
-        <a href="https://discord.com/channels/@me" target="_blank" rel="noopener noreferrer">
+        <a href="https://discord.com/users/lumiere_sombre" target="_blank" rel="noopener noreferrer">
             <img src="/src/assets/images/discord.png" alt="Logo Discord par Freepik">
         </a>
       </div>
-      <p>Dernière mise à jour: {{ lastUpdated }}</p>
+      <small>Dernière mise à jour: {{ lastUpdated }}</small>
     </footer>
   </template>
   
@@ -39,4 +39,51 @@
   </script>
   
   <style scoped>
+  footer {
+    background-color: #0f056b;
+    display: flex ;
+    flex-direction: column;
+    padding-top: 1em;
+    margin-top: 1em;
+
+
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+  }
+
+  img {
+    display: flex;
+    width: 2em;
+    height: 2em;
+    background-color: white;
+    border-radius: 100%;
+    transition: transform .1s;
+  }
+  
+  img:hover {
+-ms-transform: scale(1.5); /* IE 9 */
+-webkit-transform: scale(1.5); /* Safari 3-8 */
+transform: scale(1.5);
+  }
+
+  a {
+    padding-left: 0.05em;
+    padding-right: 0.05em;
+    padding-bottom: 0.05em;
+    color: white;
+    margin-right: 1em;
+    
+  }
+
+  small {
+    display: flex;
+    justify-content: center;
+    color: #ffd700;
+    margin-top: 0.5em;
+  }
   </style>

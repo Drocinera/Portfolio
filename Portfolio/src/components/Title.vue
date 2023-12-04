@@ -19,6 +19,17 @@
     font-family: 'Raleway', sans-serif;
     text-align: center;
     color: #ffd700;
-    text-shadow: 3px 3px 3px #0f056b;
+    text-shadow: 3px 3px 1px #7f00ff
+
+  }
+
+  div {
+    background-color: #0f056b; 
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-top: 0em;
+    margin-bottom: -1em;
+    
+    
   }
 </style>
