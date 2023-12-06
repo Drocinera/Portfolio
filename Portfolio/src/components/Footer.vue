@@ -5,10 +5,10 @@
             <img src="src/assets/images/linkedin.png" alt="Logo Linkedin par Freepik"> 
         </a>
         <a href="https://github.com/Drocinera" target="_blank" rel="noopener noreferrer">
-            <img src="/src/assets/images/signe-github.png" alt="Logo Github par Dave Gandy"> 
+            <img src="/src/assets/images/signe-github.png" alt="Logo Github par Dave Gandy" class="github"> 
         </a>
         <a href="https://discord.com/users/lumiere_sombre" target="_blank" rel="noopener noreferrer">
-            <img src="/src/assets/images/discord.png" alt="Logo Discord par Freepik">
+            <img src="/src/assets/images/discord.png" alt="Logo Discord par Freepik" class="discord">
         </a>
       </div>
       <small>Dernière mise à jour: {{ lastUpdated }}</small>
@@ -45,6 +45,7 @@
     flex-direction: column;
     padding-top: 1em;
     margin-top: 1em;
+    margin-bottom: -1em;
 
 
   }
@@ -63,6 +64,14 @@
     background-color: white;
     border-radius: 100%;
     transition: transform .1s;
+  }
+
+  .github {
+    background-color: #7f00ff ;
+  }
+
+  .discord {
+    background-color: #ffd700;
   }
   
   img:hover {

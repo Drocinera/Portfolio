@@ -15,6 +15,7 @@
   
     .logo-large {
       width: 10em; 
+      padding-left: 0.25em;
     }
   
     .logo-small {

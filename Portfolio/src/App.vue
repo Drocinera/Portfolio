@@ -38,9 +38,9 @@ export default {
     N'ayez crainte, Tout a été verifié par de fidèle gobelin qui ont explorer les méandres de cette endroit pour vous assurer un moment paisible et serein. 
     Ici vous trouverez tout ce qui me conecerne : Mes exploits héroïque (qui sont pour le moment...basique), ma passion pour la fantasy, la magie, la nature et bien évidemment le développement web et web mobile ! 
     Prenez le temps de vérifiez chaque recoin de cette endroit enchanté, qui sais quel secret vous pourriez découvrir ?"/> 
-    <Projects projectTitle="CV" imageSrc="/src/assets/images/CV.PNG"/>
+    <Projects projectTitle="CV" imageSrc="/src/assets/images/CV.PNG" />
     <Projects projectTitle="Cahier des charges" imageSrc="/src/assets/images/Cahier-des-charges.PNG" />
-    <Projects projectTitle="Dynamiser un espace commentaire" imageSrc="/src/assets/images/Dynamiser-un-espace-commentaire.PNG"/>
+    <Projects projectTitle="Dynamiser un espace commentaire" imageSrc="/src/assets/images/Dynamiser-un-espace-commentaire.PNG" class="lastDiv"/>
     <ContactForm />
     <Footer/>  
   </div>
@@ -55,6 +55,9 @@ export default {
     justify-content: space-between;
     align-items:bottom;
     background-color: #0f056b; /*Bleu nuit*/
+    margin-bottom: 1em;
+    margin-top: -1em;
+    padding-top: 1em;
   }
 
   .citation {
@@ -62,5 +65,9 @@ export default {
     width: 30em;
     padding-right: 3em;
   
+  }
+
+  .lastDiv {
+    margin-bottom: 1em;
   }
 </style>

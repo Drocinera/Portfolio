@@ -19,7 +19,7 @@
     font-family: 'Raleway', sans-serif;
     text-align: center;
     color: #ffd700;
-    text-shadow: 3px 3px 1px #7f00ff
+    text-shadow: 3px 3px 1px #7f00ff;
 
   }
 
