@@ -1,9 +1,8 @@
 <template>
     <nav>
-      <div class="nav-item">Qui-suis-je ?</div>
-      <div class="nav-item">Créations</div>
-      <div class="nav-item">Contact</div>
-      <div class="nav-item">Vers la magie</div>
+      <div class="nav-item"><a href="#introduction">Qui-suis-je ?</a></div>
+      <div class="nav-item"><a href="#projet">Créations</a></div>
+      <div class="nav-item"><a href="#Contact">Contact</a></div>
     </nav>
   </template>
   

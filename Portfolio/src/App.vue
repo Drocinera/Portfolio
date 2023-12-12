@@ -21,28 +21,48 @@ export default {
     ContactForm,
     Footer,
   },
+  data() {
+    return {
+      isSticky: false,
+    };
+  },
+  methods:{
+    handleScroll() {
+      this.isSticky = window.scrollY > 0;
+    },
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
 };
 </script>
 
 <template>
-  <div class="menu-container">
-    <Header />
-    <div class="citation-container">
-      <img src="/src/assets/images/Citation-portfolio.PNG" alt="Citation indiquant: La logique vous mènera d'un point A à un point B. L'imagination vous mènera partout. (Albert Einstein)" class="citation" >
-    </div>
-    <Navigation />
-  </div>
   <div>
-    <Title title="Portfolio de Pichonneau Théo" subtitle="Développeur web et web mobile " />
-    <Introduction introduction="Salutation, voyageurs ! Bienvenu sur mon humble portfolio où se mêle magie et technologie. 
-    N'ayez crainte, Tout a été verifié par de fidèle gobelin qui ont explorer les méandres de cette endroit pour vous assurer un moment paisible et serein. 
-    Ici vous trouverez tout ce qui me conecerne : Mes exploits héroïque (qui sont pour le moment...basique), ma passion pour la fantasy, la magie, la nature et bien évidemment le développement web et web mobile ! 
-    Prenez le temps de vérifiez chaque recoin de cette endroit enchanté, qui sais quel secret vous pourriez découvrir ?"/> 
-    <Projects projectTitle="CV" imageSrc="/src/assets/images/CV.PNG" />
-    <Projects projectTitle="Cahier des charges" imageSrc="/src/assets/images/Cahier-des-charges.PNG" />
-    <Projects projectTitle="Dynamiser un espace commentaire" imageSrc="/src/assets/images/Dynamiser-un-espace-commentaire.PNG" class="lastDiv"/>
-    <ContactForm />
-    <Footer/>  
+
+    <div class="menu-container">
+     <Header :class="{ 'sticky': isSticky }"/>
+      <div class="citation-container">
+        <img src="/src/assets/images/Citation-portfolio.PNG" alt="Citation indiquant: La logique vous mènera d'un point A à un point B. L'imagination vous mènera partout." class="citation"
+        title="Citation de Albert Einstein" >
+      </div>
+    <Navigation :class="{ 'sticky': isSticky }"/>
+   </div>
+     <div>
+      <Title title="Portfolio de Pichonneau Théo" subtitle="Développeur web et web mobile " />
+      <Introduction id="introduction" introduction="Salutation, voyageurs ! Bienvenu sur mon humble portfolio où se mêle magie et technologie. 
+        N'ayez crainte, Tout a été verifié par de fidèle gobelin qui ont explorer les méandres de cette endroit pour vous assurer un moment paisible et serein. 
+        Ici vous trouverez tout ce qui me conecerne : Mes exploits héroïque (qui sont pour le moment...basique), ma passion pour la fantasy, la magie, la nature et bien évidemment le développement web et web mobile ! 
+         Prenez le temps de vérifiez chaque recoin de cette endroit enchanté, qui sais quel secret vous pourriez découvrir ?"/> 
+      <Projects id="projet" projectTitle="CV" imageSrc="/src/assets/images/CV.PNG" />
+      <Projects projectTitle="Cahier des charges" imageSrc="/src/assets/images/Cahier-des-charges.PNG" />
+      <Projects projectTitle="Dynamiser un espace commentaire" imageSrc="/src/assets/images/Dynamiser-un-espace-commentaire.PNG" class="lastDiv"/>
+      <ContactForm/>
+      <Footer/> 
+     </div>
   </div>
 </template>
 
@@ -58,7 +78,16 @@ export default {
     margin-bottom: 1em;
     margin-top: -1em;
     padding-top: 1em;
+    position: relative;
+    transition: background-color 0.3s;
   }
+
+  .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 50%;
+}
 
   .citation {
     height: 10em;
