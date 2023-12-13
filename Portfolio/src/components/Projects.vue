@@ -81,3 +81,5 @@ export default {
     border-bottom: 3px solid #0f056b;
   }
 </style>
+
+regler bug de dupplication des projects

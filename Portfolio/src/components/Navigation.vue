@@ -5,13 +5,16 @@
       <div class="nav-item"><a href="#Contact">Contact</a></div>
     </nav>
   </template>
+
+<script>
+</script>
   
   <style scoped>
 
     nav {
       display: flex;
-      flex-direction: column;;
-      
+      flex-direction: column;
+    
     }
     .nav-item {
       font-size: small;
@@ -22,7 +25,6 @@
       background-color: #ffd700; /*Couleur Or*/
       filter: contrast(200%);
       align-self: flex-end;
-      
-  
+    
     }
   </style>
