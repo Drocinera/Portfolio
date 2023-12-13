@@ -21,6 +21,12 @@ export default {
       window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
     },
   },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
 };
 </script>
 

@@ -26,7 +26,13 @@ export default {
       isSticky: false,
     };
   },
-  methods:{
+  methods: {
+    scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    },
+    scrollToBottom() {
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    },
     handleScroll() {
       this.isSticky = window.scrollY > 0;
     },
@@ -73,20 +79,23 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items:bottom;
+    align-items: bottom;
     background-color: #0f056b; /*Bleu nuit*/
     margin-bottom: 1em;
     margin-top: -1em;
     padding-top: 1em;
     position: relative;
     transition: background-color 0.3s;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
   }
 
   .sticky {
   position: fixed;
   top: 0;
   width: 100%;
-  opacity: 50%;
+  background-color: transparent;
 }
 
   .citation {

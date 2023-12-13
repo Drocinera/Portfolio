@@ -5,8 +5,8 @@
         <h2>{{ project.title }}</h2>
         <p>Date de création: {{ project.creationDate }}</p>
         <p>Technologies utilisées: {{ project.technologies }}</p>
-        <a v-if="project.visitLink" :href="project.visitLink" target="_blank">Visiter le site</a>
-        <a v-if="project.githubLink" :href="project.githubLink" target="_blank">Repository GitHub</a>
+        <p><a v-if="project.visitLink" :href="project.visitLink" target="_blank">Visiter le site</a></p>
+        <p><a v-if="project.githubLink" :href="project.githubLink" target="_blank">Repository GitHub</a></p>
         <button @click="closeModal" class="close-button">Fermer</button>
         </div> 
     </div>
