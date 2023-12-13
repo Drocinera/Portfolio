@@ -48,7 +48,6 @@ export default {
 
 <template>
   <div>
-
     <div class="menu-container">
      <Header :class="{ 'sticky': isSticky }"/>
       <div class="citation-container">
@@ -63,9 +62,7 @@ export default {
         N'ayez crainte, Tout a été verifié par de fidèle gobelin qui ont explorer les méandres de cette endroit pour vous assurer un moment paisible et serein. 
         Ici vous trouverez tout ce qui me conecerne : Mes exploits héroïque (qui sont pour le moment...basique), ma passion pour la fantasy, la magie, la nature et bien évidemment le développement web et web mobile ! 
          Prenez le temps de vérifiez chaque recoin de cette endroit enchanté, qui sais quel secret vous pourriez découvrir ?"/> 
-      <Projects id="projet" projectTitle="CV" imageSrc="/src/assets/images/CV.PNG" />
-      <Projects projectTitle="Cahier des charges" imageSrc="/src/assets/images/Cahier-des-charges.PNG" />
-      <Projects projectTitle="Dynamiser un espace commentaire" imageSrc="/src/assets/images/Dynamiser-un-espace-commentaire.PNG" class="lastDiv"/>
+      <Projects projectTitle="CV" imageSrc="/src/assets/images/CV.PNG" class="lastDiv" />
       <ContactForm/>
       <Footer/> 
      </div>
@@ -88,7 +85,7 @@ export default {
     transition: background-color 0.3s;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 9999;
   }
 
   .sticky {
