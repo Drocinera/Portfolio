@@ -53,5 +53,4 @@ export default {
 </style>
 
   Doit ajouter des liens pour , lorsque cliquer sur logo, monter tout en haut oage.
-  Pareil pour petit logo pour descendre page.
   Navigation et header doivent suivre le scrolling et devenir un peu plus flou
