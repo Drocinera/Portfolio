@@ -105,4 +105,8 @@ export default {
   .lastDiv {
     margin-bottom: 1em;
   }
+
+  body.modal-open {
+  overflow: hidden;
+}
 </style>
