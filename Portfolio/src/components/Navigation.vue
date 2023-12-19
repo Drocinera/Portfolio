@@ -25,6 +25,6 @@
       background-color: #ffd700; /*Couleur Or*/
       filter: contrast(200%);
       align-self: flex-end;
-    
     }
+
   </style>

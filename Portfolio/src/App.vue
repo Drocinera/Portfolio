@@ -49,12 +49,12 @@ export default {
 <template>
   <div>
     <div class="menu-container">
-     <Header :class="{ 'sticky': isSticky }"/>
+      <Header :class="{ 'sticky': isSticky, 'sticky-header': isSticky }"/>
       <div class="citation-container">
         <img src="/src/assets/images/Citation-portfolio.PNG" alt="Citation indiquant: La logique vous mènera d'un point A à un point B. L'imagination vous mènera partout." class="citation"
         title="Citation de Albert Einstein" >
       </div>
-    <Navigation :class="{ 'sticky': isSticky }"/>
+      <Navigation :class="{ 'sticky': isSticky, 'sticky-navigation': isSticky }"/>
    </div>
      <div>
       <Title title="Portfolio de Pichonneau Théo" subtitle="Développeur web et web mobile " />
@@ -85,14 +85,20 @@ export default {
     transition: background-color 0.3s;
     width: 100%;
     top: 0;
-    z-index: 9999;
   }
 
   .sticky {
+  justify-content: space-between;
   position: fixed;
-  top: 0;
-  width: 100%;
   background-color: transparent;
+  box-sizing: border-box;
+  margin-inline-end: 10em;
+}
+
+
+nav.sticky.sticky-navigation {
+  right: -9.75em;
+
 }
 
   .citation {
