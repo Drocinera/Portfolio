@@ -4,3 +4,17 @@ body {
     background-color: #ffd700; 
    /* #7f00ff; Couleur violet */
 }
+
+body:before {
+    content: '';
+    display: block;
+    height: 10px;
+    margin-top: 1px;
+    visibility: hidden;
+    pointer-events: none;
+    transition: visibility 0.3s ease-in-out;
+  }
+
+  body.scrolling:before {
+    visibility: visible;
+  }

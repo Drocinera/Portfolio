@@ -1,11 +1,13 @@
 <template>
-   <div>
-    <div v-for="project in projects" :key="project.title" @click="openModal(project)">
-      <h3>{{ project.title }}</h3>
-      <img :src="project.imageSrc" alt="Image du projet" />
-    </div>
-    <ModalProject ref="modalProject" :project="selectedProject" :visible="modalVisible" @closeModal="closeModal" @nextImage="nextImage" />
-  </div>
+   <section id="projet">
+      <div>
+        <div v-for="project in projects" :key="project.title" @click="openModal(project)">
+          <h3>{{ project.title }}</h3>
+            <img :src="project.imageSrc" alt="Image du projet" />
+        </div>
+          <ModalProject ref="modalProject" :project="selectedProject" :visible="modalVisible" @closeModal="closeModal" @nextImage="nextImage" />
+      </div>
+  </section>
 </template>
 
 <script>
@@ -95,6 +97,10 @@ export default {
 </script>
 
 <style scoped>
+
+section {
+  padding-bottom: 1em;
+}
   div {
     display: flex;
     flex-direction: column;
@@ -113,6 +119,7 @@ export default {
     color: #ffd700;
     border-bottom: 3px solid #0f056b;
   }
+
 
 </style>
 
