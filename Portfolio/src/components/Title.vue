@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="title-container">
       <h1>{{ title }}</h1>
       <h2>{{ subtitle }}</h2>
     </div>
@@ -23,13 +23,13 @@
 
   }
 
-  div {
-    background-color: #0f056b; 
-    padding-top: 10px;
-    padding-bottom: 20px;
-    margin-top: 0em;
-    margin-bottom: -1em;
-    
-    
-  }
+  .title-container {
+  background-color: #0f056b;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  margin-top: 0em;
+  margin-bottom: -1em;
+}
+
+
 </style>

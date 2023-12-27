@@ -13,10 +13,13 @@ export default {
 </script>
 
 <style scoped> 
+
   p {
     color:#ffd700 ;
     background-color:#0f056b ;
-    text-align: center ;
-    
+    text-align: center ; 
+    height: 341px;   
   }
+
+
 </style>
