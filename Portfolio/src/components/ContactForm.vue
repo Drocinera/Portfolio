@@ -101,6 +101,7 @@ textarea {
 button {
   background: linear-gradient(45deg, #ff00cc, #3333cc);
   transition: background 0.3s ease-in-out;
+  right: 2em;
 }
 
 button:hover {
