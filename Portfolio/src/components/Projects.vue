@@ -111,7 +111,7 @@ section {
   img {
     width: 20em;
     height: 20em;
-    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
     cursor: pointer;
   }
 
@@ -122,7 +122,6 @@ section {
 
 img:hover {
   box-shadow: 5px 5px 4px 3px black;
-  z-index: 100;
 }
 
 h3:hover {
