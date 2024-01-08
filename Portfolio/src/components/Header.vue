@@ -52,6 +52,4 @@ export default {
 }
 </style>
 
- 
-  Navigation et header doivent suivre le scrolling et devenir un peu plus flou
   ajout d'une animation lors du clic navigation pour dire que l'on est arriver a destination. 

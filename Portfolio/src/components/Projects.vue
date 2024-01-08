@@ -105,7 +105,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #7f00ff;
+    background-color: #0f056b;
   }
 
   img {
@@ -120,6 +120,14 @@ section {
     border-bottom: 3px solid #0f056b;
   }
 
+img:hover {
+  box-shadow: 5px 5px 4px 3px black;
+  z-index: 100;
+}
+
+h3:hover {
+background:linear-gradient(#582900,#008000) ;
+}
 
 </style>
 

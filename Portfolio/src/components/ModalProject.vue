@@ -152,5 +152,3 @@ beforeDestroy() {
   margin-top: 10px;
 }
   </style>
-  <!--Faire en sorte que le carousel de photo ne bug plus (affiche les images, le bouton change a l'image suivante)
-  Regarder d'autre site pour regarder leur code et comment ils gère le carousel-->

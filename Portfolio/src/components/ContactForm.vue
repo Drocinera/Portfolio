@@ -1,5 +1,5 @@
 <template>
-  <section id="Contact" class="Areaform AreaformBlink"  >
+  <section id="Contact" class="Areaform">
     <form @submit.prevent="submitForm" class="formulaire">
       <div class="form-group">
         <label for="name">Nom :</label>
@@ -107,18 +107,6 @@ button:hover {
   background: linear-gradient(45deg, #ff0066, #330066);
 }
 
-@keyframes blinking {
-        0% {
-          background-color: #06c3d1;
-          border: 3px solid #666;
-        }
-        100% {
-          background-color: #270da6;
-          border: 3px solid #666;
-        }
-      }
-      .AreaformBlink {
-        animation: blinking 1s infinite;
-      }
+
 
   </style>

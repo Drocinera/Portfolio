@@ -118,4 +118,19 @@ nav.sticky.sticky-navigation {
   body.modal-open {
   overflow: hidden;
 }
+
+
+  /*@keyframes blinking {
+    0%, 100% {
+      background-color: #ffffff;
+    }
+    50% {
+      background-color: #020202;
+    }
+  }
+
+  .section-blinking {
+    animation: blinking 1.5s ;
+  }*/
+
 </style>

@@ -14,7 +14,6 @@
 
 <script setup>
 const handleScroll = () => {
-  const pixel = document.body;
   const sections = document.querySelectorAll('section');
   let currentSectionId = null;
 
@@ -25,9 +24,15 @@ const handleScroll = () => {
     if (isVisible) {
       currentSectionId = section.id;
 
+      section.classList.add('section-blinking');
+
+      setTimeout(() => {
+        section.classList.remove('section-blinking');
+      }, 2000);
+
       const anchorLink = document.querySelector(`a[href="#${currentSectionId}"]`);
       if (anchorLink) {
-        anchorLink.classList.add('active');
+        anchorLink.classList.add('active-link');
       }
     }
   });
@@ -35,7 +40,12 @@ const handleScroll = () => {
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     const anchorSectionId = anchor.getAttribute('href').substring(1);
     if (anchorSectionId !== currentSectionId) {
-      anchor.classList.remove('active');
+      const section = document.getElementById(anchorSectionId);
+
+      const anchorLink = document.querySelector(`a[href="#${anchorSectionId}"]`);
+      if (anchorLink) {
+        anchorLink.classList.remove('active-link');
+      }
     }
   });
 };
@@ -65,13 +75,9 @@ window.addEventListener('scroll', handleScroll);
       text-decoration: none;
     }
 
-    .active {
+    .active-link {
       text-decoration: underline;
       color:red
     }
 
   </style>
-
-  Animaion voulu : Clignotement de contact/ introduction et project lors du clic.
-  Essayer de faire comme les messages d'erreur. L'animation n'est pas visible jusqu'a ce que le clic sur un lien soit fait
-appronfondir avec le pixel invisible qui permet d'activer le lien actif. Projet ne s'active pas. Introduction surement pas assez grand. 
