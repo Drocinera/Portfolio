@@ -105,13 +105,13 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #7f00ff;
+    background-color: #0f056b;
   }
 
   img {
     width: 20em;
     height: 20em;
-    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
     cursor: pointer;
   }
 
@@ -120,6 +120,13 @@ section {
     border-bottom: 3px solid #0f056b;
   }
 
+img:hover {
+  box-shadow: 5px 5px 4px 3px black;
+}
+
+h3:hover {
+background:linear-gradient(#582900,#008000) ;
+}
 
 </style>
 

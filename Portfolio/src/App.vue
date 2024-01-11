@@ -59,10 +59,7 @@ export default {
      <div>
         <section id="introduction">
       <Title title="Portfolio de Pichonneau Théo" subtitle="Développeur web et web mobile " />
-      <Introduction  introduction="Salutation, voyageurs ! Bienvenu sur mon humble portfolio où se mêle magie et technologie. 
-        N'ayez crainte, Tout a été verifié par de fidèle gobelin qui ont explorer les méandres de cette endroit pour vous assurer un moment paisible et serein. 
-        Ici vous trouverez tout ce qui me conecerne : Mes exploits héroïque (qui sont pour le moment...basique), ma passion pour la fantasy, la magie, la nature et bien évidemment le développement web et web mobile ! 
-         Prenez le temps de vérifiez chaque recoin de cette endroit enchanté, qui sais quel secret vous pourriez découvrir ?"/> 
+      <Introduction/> 
         </section>
       <Projects projectTitle="CV" imageSrc="/src/assets/images/CV.PNG"/>
       <ContactForm/>
@@ -115,7 +112,26 @@ nav.sticky.sticky-navigation {
   
   }
 
+  .citation-container {
+position: relative ;
+  }
+
   body.modal-open {
   overflow: hidden;
 }
+
+
+  /*@keyframes blinking {
+    0%, 100% {
+      background-color: #ffffff;
+    }
+    50% {
+      background-color: #020202;
+    }
+  }
+
+  .section-blinking {
+    animation: blinking 1.5s ;
+  }*/
+
 </style>
