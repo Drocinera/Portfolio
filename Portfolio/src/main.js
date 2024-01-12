@@ -3,12 +3,13 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router'
+import Home from './views/Home.vue';
 import NotFound from './views/NotFound.vue';
 
 const routes = [
-  { name: "404", path: '/not-found', component: NotFound },
-  { path: '/:pathMatch(.*)*', redirect: { name: "404" } },
-  {name: "home", path:"/", component: App}
+  { path: '/', component: Home },
+  { path: '/not-found', name: 'not-found', component: NotFound },
+  { path: '/:pathMatch(.*)*', redirect: { name: 'not-found' } },
 ];
 
 const router = createRouter({

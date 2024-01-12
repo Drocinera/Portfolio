@@ -3,8 +3,8 @@
       <img src="/src/assets/images/image-404.jpg" alt="404 Image by Jeff Finley">
       <h1>404</h1>
       <h2>OOPS</h2>
-        <p>Il semblerai que la magie nest pas été trouver
-          <button @click="goBack">Cliquez ici</button> pour revenir en zone connue </p>
+        <p>Il semblerai que la magie nest pas été trouvée !
+          <a @click="goBack">Cliquez ici</a> pour revenir en zone connue .</p>
     </div>
   </template>
   
@@ -26,7 +26,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #fff; 
+    background-color: #ffffff; 
     z-index: 9999; 
     display: flex;
     flex-direction: column;
@@ -34,9 +34,15 @@
     justify-content: center;
   }
   img {
-    width: 10em;
-    height: 10em;
+    width: 20em;
+    height: 20em;
   }  
+
+  a {
+    text-decoration: none;
+    cursor:pointer;
+    color:#0f056b;
+  }
   </style>
 
 Pour tenter de regler le problème : 

@@ -143,8 +143,3 @@ export default {
   animation: fadeInOut 2s ease-in-out;
 }
 </style>
-
-faire apparaitre image lorsque le mot cliquer
-animation magie : Doit faire apparaitre l'image pendant l'animation et la laisser visible apres.
-animation nature : L'image doit "sortir du sol"
-animation technologie : si possible, l'image apparait peu a peu comme des lignes qui sont écrit.
