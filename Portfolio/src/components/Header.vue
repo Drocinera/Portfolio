@@ -2,11 +2,11 @@
   <header>
     <div class="logo-container">
       <img src="/src/assets/images/Logo-portfolio.jpg" alt="Logo avec une personne portant un chapeau de sorcier face à un ordinateur. Elle tient une baguette magique dirigée vers une lune rouge dans sa main gauche" 
-      class="logo-large" @click="scrollToTop" 
-      title="Défilement vers le haut"/>
+        class="logo-large" @click="scrollToTop" 
+        title="Défilement vers le haut"/>
       <img src="/src/assets/images/Baguette-magique.png" alt="Baguette magique pointant vers le bas. (Angeles Balaguer)" 
-      class="logo-small" @click="scrollToBottom" 
-      title="Défilement vers le bas"/>
+        class="logo-small" @click="scrollToBottom" 
+        title="Défilement vers le bas"/>
     </div>
   </header>
 </template>
@@ -51,5 +51,3 @@ export default {
   cursor: pointer;
 }
 </style>
-
-  ajout d'une animation lors du clic navigation pour dire que l'on est arriver a destination. 

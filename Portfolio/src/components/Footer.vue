@@ -2,16 +2,16 @@
     <footer>
       <div class="social-icons">
         <a href=https://www.linkedin.com/in/théo-pichonneau-53b113258/ target="_blank" rel="noopener noreferrer">
-            <img src="src/assets/images/linkedin.png" alt="Logo Linkedin par Freepik"> 
+          <img src="src/assets/images/linkedin.png" alt="Logo Linkedin par Freepik"> 
         </a>
         <a href="https://github.com/Drocinera" target="_blank" rel="noopener noreferrer">
-            <img src="/src/assets/images/signe-github.png" alt="Logo Github par Dave Gandy" class="github"> 
+          <img src="/src/assets/images/signe-github.png" alt="Logo Github par Dave Gandy" class="github"> 
         </a>
         <a href="https://discord.com/users/lumiere_sombre" target="_blank" rel="noopener noreferrer">
-            <img src="/src/assets/images/discord.png" alt="Logo Discord par Freepik" class="discord">
+          <img src="/src/assets/images/discord.png" alt="Logo Discord par Freepik" class="discord">
         </a>
       </div>
-      <small>Dernière mise à jour: {{ lastUpdated }}</small>
+        <small>Dernière mise à jour: {{ lastUpdated }}</small>
     </footer>
   </template>
   

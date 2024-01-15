@@ -26,7 +26,7 @@
         <textarea id="message" v-model="message" required></textarea>
       </div>
 
-      <button type="submit">Envoyer</button>
+        <button type="submit">Envoyer</button>
       </form>
     </section>
   </template>
@@ -107,7 +107,4 @@ button {
 button:hover {
   background: linear-gradient(45deg, #ff0066, #330066);
 }
-
-
-
   </style>

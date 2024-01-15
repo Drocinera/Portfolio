@@ -2,17 +2,17 @@
   <div v-if="visible" class="modal-overlay" ref="modal"  @mousedown="handleMouseDown" @mouseup="handleMouseUp" @click="handleClickOutside">
     <div class="modal-content fixed-modal" @click.stop="handleclickInside" >
       <h2>{{ project.title }}</h2>
-      <p>Date de création: {{ project.creationDate }}</p>
-        <div class="diaporama-container">
-          <p>Détail en image : </p>
+        <p>Date de création: {{ project.creationDate }}</p>
+      <div class="diaporama-container">
+         <p>Détail en image : </p>
           <img :src="project.images[project.currentImageIndex]" alt="Images du projet" class="project-image" />
-          <button @click="nextImage" class="scroll-button button-next">Suivant</button>
-        </div>
-      <p>Technologies utilisées: {{ project.technologies }}</p>
-      <p><a v-if="project.visitLink" :href="project.visitLink" target="_blank">Visiter le site</a></p>
-      <p><a v-if="project.githubLink" :href="project.githubLink" target="_blank">Repository GitHub</a></p>
-      <div class="button-container">
-      <button @click="closeModalInternal" class="close-button">Fermer</button>
+            <button @click="nextImage" class="scroll-button button-next">Suivant</button>
+      </div>
+        <p>Technologies utilisées: {{ project.technologies }}</p>
+        <p><a v-if="project.visitLink" :href="project.visitLink" target="_blank">Visiter le site</a></p>
+        <p><a v-if="project.githubLink" :href="project.githubLink" target="_blank">Repository GitHub</a></p>
+        <div class="button-container">
+          <button @click="closeModalInternal" class="close-button">Fermer</button>
         </div>
     </div>
   </div>
