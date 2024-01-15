@@ -1,6 +1,6 @@
 <template>
   <section id="Contact" class="Areaform">
-    <form @submit.prevent="submitForm" class="formulaire">
+    <form @submit.prevent="submitForm"  class="formulaire">
       <div class="form-group">
         <label for="name">Nom :</label>
         <input type="text" id="name" v-model="name" required />
@@ -27,6 +27,7 @@
       </div>
 
         <button type="submit">Envoyer</button>
+        <p v-if="formSent">Le message a bien été envoyé </p>
       </form>
     </section>
   </template>
@@ -40,31 +41,50 @@
         mail: '',
         subject: '',
         message: '',
+        formSent: false,
       };
     },
     methods: {
-      submitForm() {
-        if (
-          this.name === '' ||
-          this.lastName === '' ||
-          this.mail === '' ||
-          this.subject === '' ||
-          this.message === '' ) {
-          document.getElementById('error-message').style.display = 'block';
-      } else {
-         document.getElementById('error-message').style.display = 'none';
-         
-//Ici pour l'envoie des donnée par mail//
+      validateForm() {
+    return this.name !== '' && this.lastName !== '' && this.mail !== '' && this.subject !== '' && this.message !== '';
+  },
 
-        this.name = "";
-        this.lastName = "";
-        this.mail = "";
-        this.subject = "";
-        this.message = "";
-        console.log('Message envoyé :', this.name, this.lastName, this.subject, this.message);
+  async submitForm() {
+    if (this.validateForm()) {
+      try {
+        const response = await fetch('https://formspree.io/f/mvoegbko', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: this.name,
+            lastName: this.lastName,
+            mail: this.mail,
+            subject: this.subject,
+            message: this.message,
+          }),
+        });
+
+        if (response.ok) {
+          this.formSent = true;
+
+          this.name = "";
+          this.lastName = "";
+          this.mail = "";
+          this.subject = "";
+          this.message = "";
+
+          console.log('Message envoyé :', this.name, this.lastName, this.mail, this.subject, this.message);
+        } else {
+          console.error('Erreur lors de l\'envoi du formulaire');
+        }
+      } catch (error) {
+        console.error('Une erreur est survenue :', error);
       }
-      },
-    },
+    }
+  },
+},
   };
   </script>
 
@@ -106,5 +126,9 @@ button {
 
 button:hover {
   background: linear-gradient(45deg, #ff0066, #330066);
+}
+
+p {
+  color : red;
 }
   </style>
