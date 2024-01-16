@@ -25,7 +25,6 @@ export default {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: bottom;
     background-color: #0f056b; /*Bleu nuit*/
     margin-bottom: 1em;
     margin-top: -1em;

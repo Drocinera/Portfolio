@@ -10,8 +10,10 @@
       </div>
       <div>
         <section id="introduction">
+          <div>
           <Title title="Portfolio de Pichonneau Théo" subtitle="Développeur web et web mobile " />
           <Introduction/> 
+          </div>
         </section>
           <Projects projectTitle="CV" imageSrc="/src/assets/images/CV.PNG"/>
           <ContactForm/>

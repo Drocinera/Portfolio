@@ -55,6 +55,12 @@ export default {
     font-size: 1.25em;
   }
 
+  @media only screen and (max-width: 600px) {
+  div.introduction-div {
+    overflow-wrap:break-word ;
+  }
+}
+
   a {
     text-decoration: none;
     color : #ff8000;
