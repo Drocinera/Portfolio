@@ -2,38 +2,38 @@
   <section id="Contact" class="Areaform">
     <div>
       <h3>Formulaire de contact</h3>
-      <form @submit.prevent="submitForm"  class="formulaire">
-        <div class="form-group">
-          <label for="name">Nom :</label>
-          <input type="text" id="name" v-model="name" required />
-        </div>
+        <form @submit.prevent="submitForm"  class="formulaire">
+          <div class="form-group">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" v-model="name" required />
+          </div>
 
-        <div class="form-group">
-          <label for="lastName">Prénom :</label>
-          <input type="text" id="lastName" v-model="lastName" required />
-        </div>
+          <div class="form-group">
+            <label for="lastName">Prénom :</label>
+            <input type="text" id="lastName" v-model="lastName" required />
+          </div>
 
-      <div class="form-group" style="grid-column: span 2;">
-        <label for="mail">Votre adresse mail :</label>
-        <input type="text" id="mail" v-model="mail" required/>
-      </div>
+          <div class="form-group" style="grid-column: span 2;">
+            <label for="mail">Votre adresse mail :</label>
+            <input type="text" id="mail" v-model="mail" required/>
+          </div>
 
-        <div class="form-group" style="grid-column: span 2;">
-          <label for="subject">Objet du message :</label>
-          <input type="text" id="subject" v-model="subject" required />
-        </div>
+          <div class="form-group" style="grid-column: span 2;">
+            <label for="subject">Objet du message :</label>
+            <input type="text" id="subject" v-model="subject" required />
+          </div>
 
-        <div class="form-group" style="grid-column: span 2;">
-          <label for="message">Message :</label>
-          <textarea id="message" v-model="message" required></textarea>
-        </div>
+          <div class="form-group" style="grid-column: span 2;">
+            <label for="message">Message :</label>
+            <textarea id="message" v-model="message" required></textarea>
+          </div>
 
-          <button type="submit">Envoyer</button>
-          <p v-if="formSent">Le message a bien été envoyé </p>
-        </form>
-      </div>
-    </section>
-  </template>
+        <button type="submit">Envoyer</button>
+        <p v-if="formSent">Le message a bien été envoyé </p>
+      </form>
+    </div>
+  </section>
+</template>
   
   <script>
   export default {

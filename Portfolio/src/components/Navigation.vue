@@ -13,6 +13,7 @@
   </template>
 
 <script setup>
+/* Detection de la navigation active en fonction de la section atteinte par le défilement*/
 const handleScroll = () => {
   const sections = document.querySelectorAll('section');
   let currentSectionId = null;

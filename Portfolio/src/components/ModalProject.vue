@@ -25,6 +25,7 @@ export default {
     project: Object,
     visible: Boolean,
   },
+  /* Detecttion du click de la souris en dehors ou dans le modal*/
   methods: {
     handleMouseDown() {
       this.mouseDownTime = Date.now();

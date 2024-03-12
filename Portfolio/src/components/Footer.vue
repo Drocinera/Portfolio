@@ -14,7 +14,7 @@
         <small>Dernière mise à jour: {{ lastUpdated }}</small>
     </footer>
   </template>
-  
+  <!-- Mise a jour automatique de la date-->
   <script>
   import { ref, onMounted } from 'vue'
   
