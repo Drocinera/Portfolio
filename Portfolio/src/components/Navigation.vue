@@ -1,14 +1,14 @@
 <template>
    <nav>
-    <div class="nav-item">
+    <ul class="nav-item">
       <a href="#introduction">Qui-suis-je ?</a>
-    </div>
-    <div class="nav-item">
+    </ul>
+    <ul class="nav-item">
       <a href="#projet">Créations</a>
-    </div>
-    <div class='nav-item'>
+    </ul>
+    <ul class='nav-item'>
       <a href="#Contact">Contact</a>
-    </div>
+    </ul>
   </nav>
   </template>
 
@@ -24,12 +24,6 @@ const handleScroll = () => {
 
     if (isVisible) {
       currentSectionId = section.id;
-
-      section.classList.add('section-blinking');
-
-      setTimeout(() => {
-        section.classList.remove('section-blinking');
-      }, 2000);
 
       const anchorLink = document.querySelector(`a[href="#${currentSectionId}"]`);
       if (anchorLink) {

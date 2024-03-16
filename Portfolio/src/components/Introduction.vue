@@ -2,11 +2,11 @@
   <div class="introduction-div">
     <pre>Salutation, voyageurs ! 
         Bienvenu sur mon humble portfolio où se mêle <a @click.prevent="showPortailImage" @click="showMagicalImage" href=#>magie</a> et technologie. 
-        N'ayez crainte, Tout a été verifié par de fidèle gobelin qui ont explorer les méandres de cette endroit
+        N'ayez crainte, tout a été verifié par de fidèles gobelins qui ont explorés les méandres de cette endroit
          pour vous assurer un moment paisible et serein. 
         Ici vous trouverez tout ce qui me concerne : Mes exploits héroïque (qui sont pour le moment...basique),
          Ma passion pour la fantasy, la <a @click.prevent="showPortailImage" @click="showMagicalImage" href=#>magie</a> <a @click.prevent="showNaturalImage" href="#">la nature</a> et bien évidemment le <a @click.prevent="showTechImage" href="#">développement web et web mobile</a>  ! 
-         Prenez le temps de vérifiez chaque recoin de cette endroit enchanté, qui sais quel secret vous pourriez découvrir ?</pre>
+         Prenez le temps de vérifier chaque recoin de cette endroit enchanté, qui sais quel secret vous pourriez découvrir ?</pre>
          <div class="animation-image-div">
           <img src="src/assets/images/Animation-image/illustration-blue-fire-dragon.jpg" alt="Image magique" class="magical-image" />
           <img v-if="isNatureImageVisible" src="src/assets/images/Animation-image/Iggdrasil-tree.jpg" alt="Image d'arbre" class="nature-image">

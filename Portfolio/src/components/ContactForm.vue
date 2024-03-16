@@ -29,7 +29,7 @@
           </div>
 
         <button type="submit">Envoyer</button>
-        <p v-if="formSent">Le message a bien été envoyé </p>
+        <p v-if="formSent">Le message a bien été envoyée </p>
       </form>
     </div>
   </section>
