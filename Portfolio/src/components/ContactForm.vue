@@ -95,14 +95,13 @@
 
 h3 {
   text-align: center;
-  color: #e217ac ;
 }
   .Areaform {
-    background-color: #0f056b;
+    background-color: #86a5d9
   }
 
   .form-group {
-    background-color: #7f00ff ;
+    background-color: #5f4bb6 ;
    padding: 2px;
   }
 .formulaire {

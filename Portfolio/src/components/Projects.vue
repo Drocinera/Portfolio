@@ -1,6 +1,6 @@
 <template>
    <section id="projet">
-      <div>
+      <div class="project-container">
         <div v-for="project in projects" :key="project.title" @click="openModal(project)">
           <h3>{{ project.title }}</h3>
             <img :src="project.imageSrc" alt="Image du projet" />
@@ -101,11 +101,20 @@ export default {
 section {
   padding-bottom: 1em;
 }
+
+#projet-container {
+  display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+
   div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #0f056b;
+    background-color: #86a5d9;
   }
 
 img {
@@ -115,13 +124,12 @@ img {
     cursor: pointer;
   }
 
-h3 {
-    color: #ffd700;
-    border-bottom: 3px solid #0f056b;
-  }
-
 img:hover {
   box-shadow: 5px 5px 4px 3px black;
+}
+
+h3 {
+  width: 5em;
 }
 
 h3:hover {

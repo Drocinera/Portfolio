@@ -24,7 +24,7 @@
   }
 
   .title-container {
-  background-color: #0f056b;
+  background-color: #86a5d9;
   padding-top: 10px;
   padding-bottom: 20px;
   margin-top: 0em;

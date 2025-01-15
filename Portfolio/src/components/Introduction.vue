@@ -4,9 +4,9 @@
         Bienvenu sur mon humble portfolio où se mêle <a @click.prevent="showPortailImage" @click="showMagicalImage" href=#>magie</a> et technologie. 
         N'ayez crainte, tout a été verifié par de fidèles gobelins qui ont explorés les méandres de cette endroit
          pour vous assurer un moment paisible et serein. 
-        Ici vous trouverez tout ce qui me concerne : Mes exploits héroïque (qui sont pour le moment...basique),
-         Ma passion pour la fantasy, la <a @click.prevent="showPortailImage" @click="showMagicalImage" href=#>magie</a> <a @click.prevent="showNaturalImage" href="#">la nature</a> et bien évidemment le <a @click.prevent="showTechImage" href="#">développement web et web mobile</a>  ! 
-         Prenez le temps de vérifier chaque recoin de cette endroit enchanté, qui sais quel secret vous pourriez découvrir ?</pre>
+        Ici vous trouverez tout ce qui me concerne : Mes exploits héroïque,
+         Ma passion pour la fantasy, la <a @click.prevent="showPortailImage" @click="showMagicalImage" href=#>magie</a>, <a @click.prevent="showNaturalImage" href="#">la nature</a> et bien évidemment le <a @click.prevent="showTechImage" href="#">développement web et web mobile</a>  ! 
+         Prenez le temps de vérifier chaque recoin de cette endroit, qui sais quel secret vous pourriez découvrir ?</pre>
          <div class="animation-image-div">
           <img src="src/assets/images/Animation-image/illustration-blue-fire-dragon.jpg" alt="Image magique" class="magical-image" />
           <img v-if="isNatureImageVisible" src="src/assets/images/Animation-image/Iggdrasil-tree.jpg" alt="Image d'arbre" class="nature-image">
@@ -50,9 +50,9 @@ export default {
 
   pre {
     font-family: 'MedievalSharp', cursive;
-    color:#ff8000 ;
     text-align: center ;   
     font-size: 1.25em;
+    color: #111715;
   }
 
   @media only screen and (max-width: 600px) {
@@ -63,12 +63,12 @@ export default {
 
   a {
     text-decoration: none;
-    color : #ff8000;
+    color : #111715;
   }
 
   .introduction-div {
     height: 341px; 
-    background-color:#0f056b ;
+    background-color: #86a5d9;
     margin-bottom: 1em;
     padding-top: 1em;
     justify-content: center;
