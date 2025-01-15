@@ -52,7 +52,7 @@ window.addEventListener('scroll', handleScroll);
 
     nav {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
     
     }
     .nav-item {
@@ -61,13 +61,14 @@ window.addEventListener('scroll', handleScroll);
       border: 1px solid #ddd;
       margin: 5px;
       height: min-content;
-      background-color: #ffd700; /*Couleur Or*/
+      background-color: #111715; /*Couleur Or*/
       filter: contrast(200%);
       align-self: flex-end;
     }
 
     a {
       text-decoration: none;
+      color: #26F0F1;
     }
 
     .active-link {

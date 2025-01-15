@@ -40,7 +40,7 @@
   
   <style scoped>
   footer {
-    background: linear-gradient(to top, #537895 10%, #0f056b 100%);
+    background: linear-gradient(to top, #86a5d9 10%, #5f4bb6 100%);
     display: flex ;
     flex-direction: column;
     padding-top: 1em;
@@ -92,7 +92,7 @@ transform: scale(1.5);
   small {
     display: flex;
     justify-content: center;
-    color: #ffd700;
+    color: #111715;
     margin-top: 0.5em;
   }
   </style>

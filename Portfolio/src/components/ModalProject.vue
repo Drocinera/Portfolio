@@ -94,19 +94,18 @@ beforeDestroy() {
   }
   
   .modal-content {
-    color: white;
     padding: 20px;
     padding-bottom: 10em;
     margin-top: -5em;
     border-radius: 8px;
     text-align: left;
     max-width: 400px;
-    background: linear-gradient(to right, #360033, #0b8793);
+    background: linear-gradient(to right, #86A5D9, #C4EBC8);
   }
   
   a {
     text-decoration: none;
-    color: #ffd700;
+    color: #e5ff00;
   }
 
   .button-container {

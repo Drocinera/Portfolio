@@ -8,9 +8,7 @@
 }
 
 body {
-  max-width: 100em;
-  background-color: #ffd700; 
-  /* #7f00ff; Couleur violet */
+  background-color: #111715;
 }
 
 @media only screen and (max-width: 600px) {
@@ -33,4 +31,10 @@ body:before {
     visibility: visible;
   }
 
+  h1, h2, h3, h4, h5, h6 {
+    color: #5F4BB6;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
   
