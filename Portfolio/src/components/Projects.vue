@@ -70,6 +70,48 @@ export default {
           technologies: "HTML5, CSS3, JavaScript",
           githubLink: "https://github.com/Drocinera/DynamiserUnEspaceCommentaires.git" },
 
+          { projectTitle:"E-Commerce WordPress fictif", 
+          imageSrc:"/src/assets/images/la_vie_des_plantes_acceuil.PNG"  ,
+          title:"Création d'un site e-commerce avec WordPress",
+          creationDate: "23 Mars 2024",
+          images: [
+            "/src/assets/images/La_vie_des_plantes/CE_Page_acceuil.PNG",
+            "/src/assets/images/La_vie_des_plantes/CE_Page_mon_panier.PNG",
+            "/src/assets/images/La_vie_des_plantes/CE_Page_boutique.PNG", 
+            "/src/assets/images/La_vie_des_plantes/CE_Page_contact.PNG",
+            "/src/assets/images/La_vie_des_plantes/CE_Page_a_propos.PNG",
+           ],
+          technologies: "WordPress",
+          githubLink: "https://github.com/Drocinera/Site_Commerce_WP.git" },
+
+          { projectTitle:"Site vitrine \"Au Petit Village\" ", 
+          imageSrc:"/src/assets/images/Au-petit-village.PNG"  ,
+          title:"Création d'un site vitrine fictif pour \"Au Petit Village\" ",
+          creationDate: "03 Avril 2024",
+          images: [
+            "/src/assets/images/Au-Petit-Village/page-acceuil-Angular.PNG",
+            "/src/assets/images/Au-Petit-Village/page-produit-angular.PNG",
+            "/src/assets/images/Au-Petit-Village/Page-propos-angular.PNG", 
+           ],
+          technologies: "Html, CSS, TypeScript",
+          githubLink: "https://github.com/Drocinera/angular-app.git" },
+
+          { projectTitle:"Portail Professionel fictif \"Trouve ton artisan\" ", 
+          imageSrc:"/src/assets/images/Trouve-Ton-Artisan.PNG"  ,
+          title:"Création d'un site portail professionel fictif pour \"Trouve ton artisan\" ",
+          creationDate: "05 juin 2024",
+          images: [
+            "/src/assets/images/Trouve-Ton-Artisan/Acceuil-Trouve-Ton-Artisan.PNG",
+            "/src/assets/images/Trouve-Ton-Artisan/Recherche-trouve-Ton-Artisan.PNG",
+            "/src/assets/images/Trouve-Ton-Artisan/Page-Alimentation-Trouve-Ton-Artisan.PNG", 
+            "/src/assets/images/Trouve-Ton-Artisan/Page-batiment-Trouve-Ton-Artisan.PNG", 
+            "/src/assets/images/Trouve-Ton-Artisan/Page-Fabrication-Trouve-Ton-Artisan.PNG",
+            "/src/assets/images/Trouve-Ton-Artisan/Page-Service-Trouve-Ton-Artisan.PNG",
+            "/src/assets/images/Trouve-Ton-Artisan/Contact-Artisan-Trouve-Ton-Artisan.PNG", 
+           ],
+          technologies: "Html, SCSS, JavaScript",
+          githubLink: "https://github.com/Drocinera/react-app-trouve-ton-artisan.git" },
+
               ],
               selectedProject:null,
               modalVisible: false,
@@ -102,7 +144,7 @@ section {
   padding-bottom: 1em;
 }
 
-#projet-container {
+.project-container {
   display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -129,7 +171,8 @@ img:hover {
 }
 
 h3 {
-  width: 5em;
+  width: 15em;
+  text-align: center;
 }
 
 h3:hover {
