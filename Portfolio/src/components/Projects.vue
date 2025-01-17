@@ -21,15 +21,15 @@ export default {
       return {
         projects: [
         { projectTitle:"CV", 
-          imageSrc:"/src/assets/images/CV.PNG"  ,
+          imageSrc:"/src/assets/images/CV.PNG"  , 
           title:"Création d'un CV",
           creationDate: "14 Octobre 2023",
           images: [
-            "/src/assets/images/CV/Header-CV.PNG",
-            "/src/assets/images/CV/Experience-CV.PNG",
-            "/src/assets/images/CV/Diplome_Compétence-CV.PNG",
-            "/src/assets/images/CV/Aside-CV.PNG",
-            "/src/assets/images/CV/Footer-CV.PNG",
+            "/src/assets/images/CV/Header_CV.jpg",
+            "/src/assets/images/CV/Interet_CV.jpg",
+            "/src/assets/images/CV/Competence_CV.jpg",
+            "/src/assets/images/CV/Aside_CV.jpg",
+            "/src/assets/images/CV/Education_CV.jpg",
             ],
           technologies: "HTML5, CSS3",
           visitLink: "https://drive.google.com/file/d/1k-fkIuJRiK09lMhlOtOAICTHMIwge3zY/view?usp=drive_link",
