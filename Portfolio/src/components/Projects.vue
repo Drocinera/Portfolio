@@ -21,15 +21,15 @@ export default {
       return {
         projects: [
         { projectTitle:"CV", 
-          imageSrc:"/src/assets/images/CV.PNG"  ,
+          imageSrc:"/src/assets/images/CV.PNG"  , 
           title:"Création d'un CV",
           creationDate: "14 Octobre 2023",
           images: [
-            "/src/assets/images/CV/Header-CV.PNG",
-            "/src/assets/images/CV/Experience-CV.PNG",
-            "/src/assets/images/CV/Diplome_Compétence-CV.PNG",
-            "/src/assets/images/CV/Aside-CV.PNG",
-            "/src/assets/images/CV/Footer-CV.PNG",
+            "/src/assets/images/CV/Header_CV.jpg",
+            "/src/assets/images/CV/Interet_CV.jpg",
+            "/src/assets/images/CV/Competence_CV.jpg",
+            "/src/assets/images/CV/Aside_CV.jpg",
+            "/src/assets/images/CV/Education_CV.jpg",
             ],
           technologies: "HTML5, CSS3",
           visitLink: "https://drive.google.com/file/d/1k-fkIuJRiK09lMhlOtOAICTHMIwge3zY/view?usp=drive_link",
@@ -70,6 +70,83 @@ export default {
           technologies: "HTML5, CSS3, JavaScript",
           githubLink: "https://github.com/Drocinera/DynamiserUnEspaceCommentaires.git" },
 
+          { projectTitle:"E-Commerce WordPress fictif", 
+          imageSrc:"/src/assets/images/la_vie_des_plantes_acceuil.PNG"  ,
+          title:"Création d'un site e-commerce avec WordPress",
+          creationDate: "23 Mars 2024",
+          images: [
+            "/src/assets/images/La_vie_des_plantes/CE_Page_acceuil.PNG",
+            "/src/assets/images/La_vie_des_plantes/CE_Page_mon_panier.PNG",
+            "/src/assets/images/La_vie_des_plantes/CE_Page_boutique.PNG", 
+            "/src/assets/images/La_vie_des_plantes/CE_Page_contact.PNG",
+            "/src/assets/images/La_vie_des_plantes/CE_Page_a_propos.PNG",
+           ],
+          technologies: "WordPress",
+          githubLink: "https://github.com/Drocinera/Site_Commerce_WP.git" },
+
+          { projectTitle:"Site vitrine \"Au Petit Village\" ", 
+          imageSrc:"/src/assets/images/Au-petit-village.PNG"  ,
+          title:"Création d'un site vitrine fictif pour \"Au Petit Village\" ",
+          creationDate: "03 Avril 2024",
+          images: [
+            "/src/assets/images/Au-Petit-Village/page-acceuil-Angular.PNG",
+            "/src/assets/images/Au-Petit-Village/page-produit-angular.PNG",
+            "/src/assets/images/Au-Petit-Village/Page-propos-angular.PNG", 
+           ],
+          technologies: "Html, CSS, TypeScript",
+          githubLink: "https://github.com/Drocinera/angular-app.git" },
+
+          { projectTitle:"Portail Professionel fictif \"Trouve ton artisan\" ", 
+          imageSrc:"/src/assets/images/Trouve-Ton-Artisan.PNG"  ,
+          title:"Création d'un site portail professionel fictif pour \"Trouve ton artisan\" ",
+          creationDate: "05 juin 2024",
+          images: [
+            "/src/assets/images/Trouve-Ton-Artisan/Acceuil-Trouve-Ton-Artisan.PNG",
+            "/src/assets/images/Trouve-Ton-Artisan/Recherche-trouve-Ton-Artisan.PNG",
+            "/src/assets/images/Trouve-Ton-Artisan/Page-Alimentation-Trouve-Ton-Artisan.PNG", 
+            "/src/assets/images/Trouve-Ton-Artisan/Page-batiment-Trouve-Ton-Artisan.PNG", 
+            "/src/assets/images/Trouve-Ton-Artisan/Page-Fabrication-Trouve-Ton-Artisan.PNG",
+            "/src/assets/images/Trouve-Ton-Artisan/Page-Service-Trouve-Ton-Artisan.PNG",
+            "/src/assets/images/Trouve-Ton-Artisan/Contact-Artisan-Trouve-Ton-Artisan.PNG", 
+           ],
+          technologies: "Html, SCSS, JavaScript",
+          githubLink: "https://github.com/Drocinera/react-app-trouve-ton-artisan.git" },
+
+          { projectTitle:"Projet Mediatheque Python ", 
+          imageSrc:"/src/assets/images/Python-logo-notext.svg"  ,
+          title:"Création d'une médiatheque fictive en utilisant python ",
+          creationDate: "21 Aout 2024",
+          images: [
+            "/src/assets/images/Projet_Python-Mediatheque/Python-logo-notext.svg",
+           ],
+          technologies: "Python",
+          githubLink: "https://github.com/Drocinera/Python_Mediatheque.git" },
+
+          { projectTitle:"Projet port de plaiscance ", 
+          imageSrc:"/src/assets/images/API_image.svg"  ,
+          title:"Création d'une API pour des réservations de quai dans un port de plaisance",
+          creationDate: "16 Septembre 2024",
+          images: [
+            "/src/assets/images/Projet_API/API_image.svg",
+           ],
+          technologies: "Javascript, EJS",
+          githubLink: "https://github.com/Drocinera/port_de_plaisance.git" },
+
+          { projectTitle:"Projet E-commerce Stubborn", 
+          imageSrc:"/src/assets/images/Acceuil_Stubborn.png"  ,
+          title:"Création d'un site e-commerce fictif pour un magasin de sweat-shirt",
+          creationDate: "18 Octobre 2024",
+          images: [
+            "/src/assets/images/Symfony-Stubborn/Acceuil_Stubborn.PNG",
+            "/src/assets/images/Symfony-Stubborn/Boutique_stubborn.PNG",
+            "/src/assets/images/Symfony-Stubborn/Fiche_presentation_stubborn.PNG", 
+            "/src/assets/images/Symfony-Stubborn/Panier_remplis_Stubborn.PNG", 
+            "/src/assets/images/Symfony-Stubborn/Panier_Stubborn.PNG",
+           ],
+          technologies: "PHP, Twig",
+          githubLink: "https://github.com/Drocinera/Symfony_e_commerce.git" },
+
+
               ],
               selectedProject:null,
               modalVisible: false,
@@ -102,7 +179,7 @@ section {
   padding-bottom: 1em;
 }
 
-#projet-container {
+.project-container {
   display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -129,7 +206,8 @@ img:hover {
 }
 
 h3 {
-  width: 5em;
+  width: 15em;
+  text-align: center;
 }
 
 h3:hover {
