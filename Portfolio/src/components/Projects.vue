@@ -32,7 +32,7 @@ export default {
             "/src/assets/images/CV/Education_CV.jpg",
             ],
           technologies: "HTML5, CSS3",
-          visitLink: "https://drive.google.com/file/d/1k-fkIuJRiK09lMhlOtOAICTHMIwge3zY/view?usp=drive_link",
+          visitLink: "https://drive.google.com/file/d/1WwIK3sdgiRXrJpBVTpT_pES5jQ__YyS8/view?usp=sharing",
           githubLink: "https://github.com/Drocinera/CV-.git" },
          
          { projectTitle:"Cahier des charges", 
