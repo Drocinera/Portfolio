@@ -33,8 +33,7 @@ export default {
 <style scoped>
 
 .logo-container {
-  display: grid;
-  flex-direction: column;
+  display: flex;
 }
 
 .logo-large {
@@ -44,10 +43,11 @@ export default {
 }
 
 .logo-small {
-  width: 2em;
-  transform: rotate(18deg);
-  transform-origin: center;
-  filter: brightness(200%);
-  cursor: pointer;
+      width: 3em;
+    transform: rotate(18deg);
+    transform-origin: center;
+    filter: brightness(200%);
+    cursor: pointer;
+    height: 5em;
 }
 </style>

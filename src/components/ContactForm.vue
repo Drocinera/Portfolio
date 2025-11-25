@@ -96,9 +96,6 @@
 h3 {
   text-align: center;
 }
-  .Areaform {
-    background-color: #86a5d9
-  }
 
   .form-group {
     background-color: #5f4bb6 ;
@@ -128,6 +125,7 @@ button {
   background: linear-gradient(45deg, #ff00cc, #3333cc);
   transition: background 0.3s ease-in-out;
   right: 2em;
+  margin-bottom: 1em;
 }
 
 button:hover {

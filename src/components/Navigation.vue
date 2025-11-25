@@ -53,6 +53,7 @@ window.addEventListener('scroll', handleScroll);
     nav {
       display: flex;
       flex-direction: row;
+      margin-bottom: 0.5em;
     
     }
     .nav-item {

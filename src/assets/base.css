@@ -8,7 +8,9 @@
 }
 
 body {
-  background-color: #111715;
+  background-image: url("/src/assets/Images/galaxy-montagne.jpg");
+      background-size: cover;
+    background-position: center;
 }
 
 @media only screen and (max-width: 600px) {
