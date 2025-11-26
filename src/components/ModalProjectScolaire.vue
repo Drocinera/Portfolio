@@ -25,7 +25,7 @@ export default {
     project: Object,
     visible: Boolean,
   },
-  /* Detecttion du click de la souris en dehors ou dans le modal*/
+  /* Detection du click de la souris en dehors ou dans le modal*/
   methods: {
     handleMouseDown() {
       this.mouseDownTime = Date.now();
@@ -99,7 +99,7 @@ beforeDestroy() {
     margin-top: -5em;
     border-radius: 8px;
     text-align: left;
-    max-width: 400px;
+    max-width: -webkit-fill-available;
     background: linear-gradient(to right, #86A5D9, #C4EBC8);
   }
   
@@ -125,10 +125,10 @@ beforeDestroy() {
 }
 
   .project-image {
-  max-width: 100%;
-  height: 20em;
-  margin-bottom: 10px;
-  object-fit: contain;
+    max-width: -webkit-fill-available;
+    height: 20em;
+    margin-bottom: 10px;
+    object-fit: cover;
 }
 
 .button-next {

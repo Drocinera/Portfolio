@@ -1,25 +1,63 @@
 <template>
    <section id="projet">
-      <div class="project-container">
-        <div v-for="project in projects" :key="project.title" @click="openModal(project)">
-          <h3>{{ project.title }}</h3>
-            <img :src="project.imageSrc" alt="Image du projet" />
-        </div>
-        <ModalProject ref="modalProject" :project="selectedProject" :visible="modalVisible" @closeModal="closeModal" @nextImage="nextImage" />
-      </div>
+    <h2>Projets Scolaires</h2>
+<div class="project-container">
+  <div class="projet-card" v-for="p in projetsScolaires" :key="p.title" @click="openModal(p, 'scolaire')">
+    <h3>{{ p.title }}</h3>
+    <img :src="p.imageSrc" />
+  </div>
+</div>
+<ModalProjectScolaire
+  v-if="modalVisible && currentModalType === 'scolaire'"
+  :project="selectedProject"
+  :visible="true"
+  @closeModal="closeModal"
+/>
+
+<h2>Projets Professionnels</h2>
+<div class="project-container">
+  <div v-for="p in projetsProfessionnels" :key="p.title" @click="openModal(p, 'pro')">
+    <h3>{{ p.title }}</h3>
+    <img :src="p.imageSrc" />
+  </div>
+</div>
+<ModalProjectPro
+  v-if="modalVisible && currentModalType === 'pro'"
+  :project="selectedProject"
+  :visible="true"
+  @closeModal="closeModal"
+/>
+
+<h2>Projets Personnels</h2>
+<div class="project-container">
+  <div v-for="p in projetsPersonnels" :key="p.title" @click="openModal(p, 'perso')">
+    <h3>{{ p.title }}</h3>
+    <img :src="p.imageSrc" />
+  </div>
+</div>
+<ModalProjectPerso
+  v-if="modalVisible && currentModalType === 'perso'"
+  :project="selectedProject"
+  :visible="true"
+  @closeModal="closeModal"
+/>
   </section>
 </template>
 
 <script>
-import ModalProject from "@/components/ModalProject.vue";
+import ModalProjectScolaire from "@/components/ModalProjectScolaire.vue";
+import ModalProjectPerso from "@/components/ModalProjectPerso.vue";
+import ModalProjectPro from "@/components/ModalProjectPro.vue";
 
 export default {
   components: {
-    ModalProject,
+    ModalProjectScolaire,
+    ModalProjectPerso,
+    ModalProjectPro,
   },
     data() {
       return {
-        projects: [
+        projetsScolaires: [
         { projectTitle:"CV", 
           imageSrc:"/src/assets/images/CV.PNG"  , 
           title:"Création d'un CV",
@@ -148,18 +186,22 @@ export default {
 
 
               ],
+        projetsProfessionnels: [
+        ],
+        projetsPersonnels: [
+        ],
               selectedProject:null,
               modalVisible: false,
+              currentModalType: null, // "scolaire", "pro", "perso"
       };
     },
   methods: {
-    openModal(project) {
-      console.log('Open modal called')
+    openModal(project, type) {
       project.currentImageIndex = 0;
       this.selectedProject = project;
       this.modalVisible = true;
-      document.body.classList.add('modal-open');
-    },
+      this.currentModalType = type;
+          },
     closeModal() {
       console.log('Close modal called');
       this.selectedProject = null;
@@ -179,39 +221,117 @@ section {
   padding-bottom: 1em;
 }
 
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #ffe8a3;
+}
+
+
 .project-container {
   display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
 }
 
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
-img {
-    width: 20em;
-    height: 20em;
-    margin-bottom: 0.5em;
-    cursor: pointer;
-  }
-
-img:hover {
-  box-shadow: 5px 5px 4px 3px black;
+.projet-card {
+  background: rgba(20, 20, 40, 0.6);
+  border-radius: 12px;
+  padding: 1rem;
+  flex: 1 1 250px;    
+  max-width: 300px;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(120, 150, 255, 0.3);
+  box-shadow: 0 0 15px rgba(120, 120, 255, 0.15);
 }
 
-h3 {
-  width: 15em;
+.projet-card::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle, 
+    rgba(140, 100, 255, 0.25) 0%, 
+    rgba(30, 10, 60, 0) 60%
+  );
+  animation: pulseMagic 4s infinite ease-in-out;
+  transform: scale(0.6);
+  z-index: -1;
+}
+
+.projet-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow:
+    0 0 25px rgba(150, 150, 255, 0.5),
+    0 0 50px rgba(100, 180, 255, 0.3);
+  border-color: rgba(180, 200, 255, 0.9);
+}
+
+@keyframes pulseMagic {
+  0% { opacity: 0.4; transform: scale(0.7);}
+  50% { opacity: 0.8; transform: scale(1);}
+  100% { opacity: 0.4; transform: scale(0.7);}
+}
+
+.projet-card::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    transparent,
+    rgba(200, 200, 255, 0.15),
+    transparent
+  );
+  animation: scan 6s linear infinite;
+}
+
+@keyframes scan {
+  0% { top: -100%; }
+  100% { top: 200%; }
+}
+
+.projet-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.projet-card h3 {
+  margin-top: 0.7rem;
+  font-size: 1.15rem;
   text-align: center;
+  color: #ffe8a3;
 }
 
-h3:hover {
-background:linear-gradient(#582900,#008000) ;
+@media (min-width: 600px) {
+  .projet-card {
+    flex: 1 1 calc(50% - 2rem);  /* 2 par ligne */
+  }
 }
 
+@media (min-width: 900px) {
+  .projet-card {
+    flex: 1 1 calc(33% - 2rem);  /* 3 par ligne */
+  }
+}
+
+@media (min-width: 1200px) {
+  .projet-card {
+    flex: 1 1 calc(25% - 2rem);  /* 4 par ligne */
+  }
+}
+
+/* A faire : mettre image modal assez grand pour etre lisible sans que ca modifie les textes du modal*/
 </style>
 
