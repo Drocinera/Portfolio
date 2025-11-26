@@ -14,22 +14,23 @@
           <div>
           <Introduction/> 
           </div>
-            
             <div class="electric-separator"></div>
         </section>
+          <div>
           <Projects projectTitle="CV" imageSrc="/src/assets/images/CV.PNG"/>
+          </div>
           <div class="electric-separator"></div>
           <ContactForm/>
           <div class="native-galaxy-separator"></div>
           <Footer/> 
       </div>
     </div>
+    <!--Bug visuel sur le séparateur entre projet et contact. La ligne apparait par dessus l'ouverture d'un modal -->
   </template>
 
   <script>
 import Header from "@/components/Header.vue";
 import Navigation from "@/components/Navigation.vue";
-import Title from "@/components/Title.vue";
 import Introduction from "@/components/Introduction.vue";
 import Projects from "@/components/Projects.vue";
 import ContactForm from "@/components/ContactForm.vue";
@@ -39,7 +40,6 @@ export default {
   components: {
     Header,
     Navigation,
-    Title,
     Introduction,
     Projects,
     ContactForm,

@@ -1,22 +1,21 @@
 <template>
   <div class="introduction-div">
-        Salutation, voyageurs ! 
-        Bienvenu sur mon humble portfolio où se mêle magie et technologie. 
-        N'ayez crainte, tout a été verifié par de fidèles gobelins qui ont explorés les méandres de cette endroit
-         pour vous assurer un moment paisible et serein. 
-        Ici vous trouverez tout ce qui me concerne : Mes exploits héroïque,
-         Ma passion pour la fantasy, la magie, la nature et bien évidemment le développement web et web mobile  ! 
-         Prenez le temps de vérifier chaque recoin de cette endroit, qui sais quel secret vous pourriez découvrir ?
+        <p>Salutation, visiteurs. <br>
+        Je me nomme Pichonneau Théo, développeur web débutant en constante apprentissage.<br>
+        Que vous soyez ici par curiosité personnelle ou recherche professionelle , prenez le temps de tout explorer. <br>
+        Vous trouverez plus loin : Mes créations scolaire, personnelle, professionelle, un formulaire de contact et mes réseaux sociaux. <br>
+        Au plaisir de vous revoir dans cette univers qui est le mien. </p>
   </div>
 </template>
 
 <style scoped> 
 
-  pre {
+  p {
     font-family: 'MedievalSharp', cursive;
     text-align: center ;   
-    font-size: 1.25em;
-    color: #111715;
+    font-size: 2em;
+    color: #ffffff;
+text-shadow: 0 0 8px rgba(0,0,0,0.8);
   }
 
   @media only screen and (max-width: 600px) {
@@ -31,7 +30,6 @@
   }
 
   .introduction-div {
-    height: 341px; 
     margin-bottom: 1em;
     padding-top: 1em;
     justify-content: center;
