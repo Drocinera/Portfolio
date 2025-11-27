@@ -3,7 +3,7 @@
     <h2>Projets Scolaires</h2>
 <div class="project-container">
   <div class="projet-card" v-for="p in projetsScolaires" :key="p.title" @click="openModal(p, 'scolaire')">
-    <h3>{{ p.title }}</h3>
+    <h3>{{ p.projectTitle }}</h3>
     <img :src="p.imageSrc" />
   </div>
 </div>
@@ -16,8 +16,8 @@
 
 <h2>Projets Professionnels</h2>
 <div class="project-container">
-  <div v-for="p in projetsProfessionnels" :key="p.title" @click="openModal(p, 'pro')">
-    <h3>{{ p.title }}</h3>
+  <div class="projet-card" v-for="p in projetsProfessionnels" :key="p.title" @click="openModal(p, 'pro')">
+    <h3>{{ p.projectTitle }}</h3>
     <img :src="p.imageSrc" />
   </div>
 </div>
@@ -30,8 +30,8 @@
 
 <h2>Projets Personnels</h2>
 <div class="project-container">
-  <div v-for="p in projetsPersonnels" :key="p.title" @click="openModal(p, 'perso')">
-    <h3>{{ p.title }}</h3>
+  <div class="projet-card" v-for="p in projetsPersonnels" :key="p.title" @click="openModal(p, 'perso')">
+    <h3>{{ p.projectTitle }}</h3>
     <img :src="p.imageSrc" />
   </div>
 </div>
@@ -69,7 +69,7 @@ export default {
             "/src/assets/images/CV/Aside_CV.jpg",
             "/src/assets/images/CV/Education_CV.jpg",
             ],
-          technologies: "HTML5, CSS3",
+          Langages: "HTML5, CSS3",
           visitLink: "https://drive.google.com/file/d/1WwIK3sdgiRXrJpBVTpT_pES5jQ__YyS8/view?usp=sharing",
           githubLink: "https://github.com/Drocinera/CV-.git" },
          
@@ -91,7 +91,7 @@ export default {
             "/src/assets/images/Cahier-des-charges/Livrable-Cahier.PNG",
             "/src/assets/images/Cahier-des-charges/Planning-Cahier.PNG",
             ],
-          technologies: "Editeur de texte",
+          Langages: "Editeur de texte",
           visitLink: "https://drive.google.com/file/d/1zhc1vbkaO7g1XD9E8UfyL6yGx12NF-yH/view?usp=drive_link",
       },
          
@@ -105,7 +105,7 @@ export default {
             "/src/assets/images/Espace-commentaire/Erreur-commentaire.PNG",
             "/src/assets/images/Espace-commentaire/Dyanmique-commentaire.PNG",
            ],
-          technologies: "HTML5, CSS3, JavaScript",
+          Langages: "HTML5, CSS3, JavaScript",
           githubLink: "https://github.com/Drocinera/DynamiserUnEspaceCommentaires.git" },
 
           { projectTitle:"E-Commerce WordPress fictif", 
@@ -119,7 +119,7 @@ export default {
             "/src/assets/images/La_vie_des_plantes/CE_Page_contact.PNG",
             "/src/assets/images/La_vie_des_plantes/CE_Page_a_propos.PNG",
            ],
-          technologies: "WordPress",
+          Langages: "WordPress",
           githubLink: "https://github.com/Drocinera/Site_Commerce_WP.git" },
 
           { projectTitle:"Site vitrine \"Au Petit Village\" ", 
@@ -131,7 +131,7 @@ export default {
             "/src/assets/images/Au-Petit-Village/page-produit-angular.PNG",
             "/src/assets/images/Au-Petit-Village/Page-propos-angular.PNG", 
            ],
-          technologies: "Html, CSS, TypeScript",
+          Langages: "Html, CSS, TypeScript",
           githubLink: "https://github.com/Drocinera/angular-app.git" },
 
           { projectTitle:"Portail Professionel fictif \"Trouve ton artisan\" ", 
@@ -147,7 +147,7 @@ export default {
             "/src/assets/images/Trouve-Ton-Artisan/Page-Service-Trouve-Ton-Artisan.PNG",
             "/src/assets/images/Trouve-Ton-Artisan/Contact-Artisan-Trouve-Ton-Artisan.PNG", 
            ],
-          technologies: "Html, SCSS, JavaScript",
+          Langages: "Html, SCSS, JavaScript",
           githubLink: "https://github.com/Drocinera/react-app-trouve-ton-artisan.git" },
 
           { projectTitle:"Projet Mediatheque Python ", 
@@ -157,7 +157,7 @@ export default {
           images: [
             "/src/assets/images/Projet_Python-Mediatheque/Python-logo-notext.svg",
            ],
-          technologies: "Python",
+          Langages: "Python",
           githubLink: "https://github.com/Drocinera/Python_Mediatheque.git" },
 
           { projectTitle:"Projet port de plaiscance ", 
@@ -167,7 +167,7 @@ export default {
           images: [
             "/src/assets/images/Projet_API/API_image.svg",
            ],
-          technologies: "Javascript, EJS",
+          Langages: "Javascript, EJS",
           githubLink: "https://github.com/Drocinera/port_de_plaisance.git" },
 
           { projectTitle:"Projet E-commerce Stubborn", 
@@ -181,14 +181,23 @@ export default {
             "/src/assets/images/Symfony-Stubborn/Panier_remplis_Stubborn.PNG", 
             "/src/assets/images/Symfony-Stubborn/Panier_Stubborn.PNG",
            ],
-          technologies: "PHP, Twig",
+          Langages: "PHP, Twig. Framework Symfony",
           githubLink: "https://github.com/Drocinera/Symfony_e_commerce.git" },
-
+// Ajouter Projet final
 
               ],
         projetsProfessionnels: [
         ],
         projetsPersonnels: [
+          { projectTitle:"Projet 'Classeur éducatif et Encyclopédique'", 
+          imageSrc:"#"  ,
+          title:"Création d'un site répertoriant des ressources éducatives et encyclopédiques de cours en ligne animalier",
+          creationDate: "17 Avril 2025",
+          images: [
+           ],
+          Langages: "PHP, Twig, JavaScript. Framework Symfony",
+          visitLink: "symfony-web-production.up.railway.app", },
+//Ajouter image du projet personnel une fois fini
         ],
               selectedProject:null,
               modalVisible: false,

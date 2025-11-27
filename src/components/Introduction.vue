@@ -1,7 +1,7 @@
 <template>
   <div class="introduction-div">
         <p>Salutation, visiteurs. <br>
-        Je me nomme Pichonneau Théo, développeur web débutant en constante apprentissage.<br>
+        Je me nomme Pichonneau Théo, développeur web débutant avec un bac+2 en constante apprentissage.<br>
         Que vous soyez ici par curiosité personnelle ou recherche professionelle , prenez le temps de tout explorer. <br>
         Vous trouverez plus loin : Mes créations scolaire, personnelle, professionelle, un formulaire de contact et mes réseaux sociaux. <br>
         Au plaisir de vous revoir dans cette univers qui est le mien. </p>
