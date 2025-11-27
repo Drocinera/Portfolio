@@ -95,46 +95,116 @@
 
 h3 {
   text-align: center;
+  font-size: 1.6em;
+  color: #b8d8ff;
+  text-shadow: 0 0 8px #4db8ff;
+  margin-bottom: 1em;
 }
-  .Areaform {
-    background-color: #86a5d9
-  }
 
-  .form-group {
-    background-color: #5f4bb6 ;
-   padding: 2px;
-  }
+/* Conteneur global */
+.Areaform {
+  display: flex;
+  justify-content: center;
+  padding: 0em 1em;
+}
+
+/* Formulaire façon "verre magique" */
 .formulaire {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1em;
-  max-width: 400px;
-  margin: auto;
+  gap: 2.5em;
+  width: 100%;
+  max-width: 650px;
+  padding: 4em;
+  
+  background: rgba(15, 15, 35, 0.55); /* effet verre sombre */
+  border: 1px solid rgba(100, 150, 255, 0.45);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 25px rgba(100, 150, 255, 0.3);
+
+  border-radius: 1.2em;
 }
 
-label {
+/* Pour forcer certains champs à s’étendre sur 2 colonnes */
+.form-group[style*="grid-column: span 2"] {
+  grid-column: span 2 !important;
+}
+
+/* Style des champs */
+.form-group label {
+  color: #cde6ff;
+  font-weight: 600;
+  text-shadow: 0 0 4px #2e7af0;
+  margin-bottom: 0.3em;
   display: block;
-  margin-bottom: 0.25em;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 0.5em;
-  box-sizing: border-box;
+  padding: 0.8em 1em;
+  border-radius: 10px;
+  border: 1px solid rgba(140, 180, 255, 0.4);
+  background: rgba(20, 20, 45, 0.6);
+  color: #e8f4ff;
+  font-size: 1em;
+  
+  transition: 0.2s ease-in-out;
 }
 
+input:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 10px #5ab8ff;
+  border-color: #5ab8ff;
+  background: rgba(30, 30, 60, 0.7);
+}
+
+/* Bouton magique */
 button {
-  background: linear-gradient(45deg, #ff00cc, #3333cc);
-  transition: background 0.3s ease-in-out;
-  right: 2em;
+  grid-column: span 2;
+  margin-top: 1em;
+  padding: 0.8em 1.6em;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #4d5fff, #6f00ff);
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+
+  box-shadow: 0 0 12px #6f00ff;
+  transition: 0.3s;
 }
 
 button:hover {
-  background: linear-gradient(45deg, #ff0066, #330066);
+  background: linear-gradient(135deg, #6a7eff, #9b00ff);
+  box-shadow: 0 0 18px #9b00ff;
 }
 
+/* Message envoyé */
 p {
-  color : red;
+  grid-column: span 2;
+  margin-top: 0.5em;
+  text-align: center;
+  color: #7affb5;
+  font-weight: bold;
+  text-shadow: 0 0 8px #00ffaa;
 }
+
+
+/* 📱 Responsive : 1 colonne sur mobile */
+@media (max-width: 550px) {
+  .formulaire {
+    grid-template-columns: 1fr;
+  }
+  .form-group[style*="grid-column: span 2"] {
+    grid-column: span 1 !important;
+  }
+  button {
+    grid-column: span 1;
+  }
+}
+
   </style>

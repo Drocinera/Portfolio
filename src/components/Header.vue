@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="logo-container">
-      <img src="../assets/images/Logo-portfolio.jpg" alt="Logo avec une personne portant un chapeau de sorcier face à un ordinateur. Elle tient une baguette magique dirigée vers une lune rouge dans sa main gauche" 
+      <img src="../assets/images/Logo-IA-portfolio.png" alt="Logo simpliste représentant une baguette magique en diagonale haut droit terminer par une petite étoile. En dessous se trouve trois ligne terminer par des ronds à la manière du symbole port usb " 
         class="logo-large" @click="scrollToTop" 
         title="Défilement vers le haut"/>
       <img src="../assets/images/Baguette-magique.png" alt="Baguette magique pointant vers le bas. (Angeles Balaguer)" 
@@ -33,8 +33,7 @@ export default {
 <style scoped>
 
 .logo-container {
-  display: grid;
-  flex-direction: column;
+  display: flex;
 }
 
 .logo-large {
@@ -44,10 +43,11 @@ export default {
 }
 
 .logo-small {
-  width: 2em;
-  transform: rotate(18deg);
-  transform-origin: center;
-  filter: brightness(200%);
-  cursor: pointer;
+      width: 3em;
+    transform: rotate(18deg);
+    transform-origin: center;
+    filter: brightness(200%);
+    cursor: pointer;
+    height: 5em;
 }
 </style>

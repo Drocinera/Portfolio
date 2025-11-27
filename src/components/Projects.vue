@@ -1,25 +1,63 @@
 <template>
    <section id="projet">
-      <div class="project-container">
-        <div v-for="project in projects" :key="project.title" @click="openModal(project)">
-          <h3>{{ project.title }}</h3>
-            <img :src="project.imageSrc" alt="Image du projet" />
-        </div>
-        <ModalProject ref="modalProject" :project="selectedProject" :visible="modalVisible" @closeModal="closeModal" @nextImage="nextImage" />
-      </div>
+    <h2>Projets Scolaires</h2>
+<div class="project-container">
+  <div class="projet-card" v-for="p in projetsScolaires" :key="p.title" @click="openModal(p, 'scolaire')">
+    <h3>{{ p.projectTitle }}</h3>
+    <img :src="p.imageSrc" />
+  </div>
+</div>
+<ModalProjectScolaire
+  v-if="modalVisible && currentModalType === 'scolaire'"
+  :project="selectedProject"
+  :visible="true"
+  @closeModal="closeModal"
+/>
+
+<h2>Projets Professionnels</h2>
+<div class="project-container">
+  <div class="projet-card" v-for="p in projetsProfessionnels" :key="p.title" @click="openModal(p, 'pro')">
+    <h3>{{ p.projectTitle }}</h3>
+    <img :src="p.imageSrc" />
+  </div>
+</div>
+<ModalProjectPro
+  v-if="modalVisible && currentModalType === 'pro'"
+  :project="selectedProject"
+  :visible="true"
+  @closeModal="closeModal"
+/>
+
+<h2>Projets Personnels</h2>
+<div class="project-container">
+  <div class="projet-card" v-for="p in projetsPersonnels" :key="p.title" @click="openModal(p, 'perso')">
+    <h3>{{ p.projectTitle }}</h3>
+    <img :src="p.imageSrc" />
+  </div>
+</div>
+<ModalProjectPerso
+  v-if="modalVisible && currentModalType === 'perso'"
+  :project="selectedProject"
+  :visible="true"
+  @closeModal="closeModal"
+/>
   </section>
 </template>
 
 <script>
-import ModalProject from "@/components/ModalProject.vue";
+import ModalProjectScolaire from "@/components/ModalProjectScolaire.vue";
+import ModalProjectPerso from "@/components/ModalProjectPerso.vue";
+import ModalProjectPro from "@/components/ModalProjectPro.vue";
 
 export default {
   components: {
-    ModalProject,
+    ModalProjectScolaire,
+    ModalProjectPerso,
+    ModalProjectPro,
   },
     data() {
       return {
-        projects: [
+        projetsScolaires: [
         { projectTitle:"CV", 
           imageSrc:"/src/assets/images/CV.PNG"  , 
           title:"Création d'un CV",
@@ -31,7 +69,7 @@ export default {
             "/src/assets/images/CV/Aside_CV.jpg",
             "/src/assets/images/CV/Education_CV.jpg",
             ],
-          technologies: "HTML5, CSS3",
+          Langages: "HTML5, CSS3",
           visitLink: "https://drive.google.com/file/d/1WwIK3sdgiRXrJpBVTpT_pES5jQ__YyS8/view?usp=sharing",
           githubLink: "https://github.com/Drocinera/CV-.git" },
          
@@ -53,7 +91,7 @@ export default {
             "/src/assets/images/Cahier-des-charges/Livrable-Cahier.PNG",
             "/src/assets/images/Cahier-des-charges/Planning-Cahier.PNG",
             ],
-          technologies: "Editeur de texte",
+          Langages: "Editeur de texte",
           visitLink: "https://drive.google.com/file/d/1zhc1vbkaO7g1XD9E8UfyL6yGx12NF-yH/view?usp=drive_link",
       },
          
@@ -67,7 +105,7 @@ export default {
             "/src/assets/images/Espace-commentaire/Erreur-commentaire.PNG",
             "/src/assets/images/Espace-commentaire/Dyanmique-commentaire.PNG",
            ],
-          technologies: "HTML5, CSS3, JavaScript",
+          Langages: "HTML5, CSS3, JavaScript",
           githubLink: "https://github.com/Drocinera/DynamiserUnEspaceCommentaires.git" },
 
           { projectTitle:"E-Commerce WordPress fictif", 
@@ -81,7 +119,7 @@ export default {
             "/src/assets/images/La_vie_des_plantes/CE_Page_contact.PNG",
             "/src/assets/images/La_vie_des_plantes/CE_Page_a_propos.PNG",
            ],
-          technologies: "WordPress",
+          Langages: "WordPress",
           githubLink: "https://github.com/Drocinera/Site_Commerce_WP.git" },
 
           { projectTitle:"Site vitrine \"Au Petit Village\" ", 
@@ -93,7 +131,7 @@ export default {
             "/src/assets/images/Au-Petit-Village/page-produit-angular.PNG",
             "/src/assets/images/Au-Petit-Village/Page-propos-angular.PNG", 
            ],
-          technologies: "Html, CSS, TypeScript",
+          Langages: "Html, CSS, TypeScript",
           githubLink: "https://github.com/Drocinera/angular-app.git" },
 
           { projectTitle:"Portail Professionel fictif \"Trouve ton artisan\" ", 
@@ -109,7 +147,7 @@ export default {
             "/src/assets/images/Trouve-Ton-Artisan/Page-Service-Trouve-Ton-Artisan.PNG",
             "/src/assets/images/Trouve-Ton-Artisan/Contact-Artisan-Trouve-Ton-Artisan.PNG", 
            ],
-          technologies: "Html, SCSS, JavaScript",
+          Langages: "Html, SCSS, JavaScript",
           githubLink: "https://github.com/Drocinera/react-app-trouve-ton-artisan.git" },
 
           { projectTitle:"Projet Mediatheque Python ", 
@@ -119,7 +157,7 @@ export default {
           images: [
             "/src/assets/images/Projet_Python-Mediatheque/Python-logo-notext.svg",
            ],
-          technologies: "Python",
+          Langages: "Python",
           githubLink: "https://github.com/Drocinera/Python_Mediatheque.git" },
 
           { projectTitle:"Projet port de plaiscance ", 
@@ -129,7 +167,7 @@ export default {
           images: [
             "/src/assets/images/Projet_API/API_image.svg",
            ],
-          technologies: "Javascript, EJS",
+          Langages: "Javascript, EJS",
           githubLink: "https://github.com/Drocinera/port_de_plaisance.git" },
 
           { projectTitle:"Projet E-commerce Stubborn", 
@@ -143,23 +181,36 @@ export default {
             "/src/assets/images/Symfony-Stubborn/Panier_remplis_Stubborn.PNG", 
             "/src/assets/images/Symfony-Stubborn/Panier_Stubborn.PNG",
            ],
-          technologies: "PHP, Twig",
+          Langages: "PHP, Twig. Framework Symfony",
           githubLink: "https://github.com/Drocinera/Symfony_e_commerce.git" },
-
+// Ajouter Projet final
 
               ],
+        projetsProfessionnels: [
+        ],
+        projetsPersonnels: [
+          { projectTitle:"Projet 'Classeur éducatif et Encyclopédique'", 
+          imageSrc:"#"  ,
+          title:"Création d'un site répertoriant des ressources éducatives et encyclopédiques de cours en ligne animalier",
+          creationDate: "17 Avril 2025",
+          images: [
+           ],
+          Langages: "PHP, Twig, JavaScript. Framework Symfony",
+          visitLink: "symfony-web-production.up.railway.app", },
+//Ajouter image du projet personnel une fois fini
+        ],
               selectedProject:null,
               modalVisible: false,
+              currentModalType: null, // "scolaire", "pro", "perso"
       };
     },
   methods: {
-    openModal(project) {
-      console.log('Open modal called')
+    openModal(project, type) {
       project.currentImageIndex = 0;
       this.selectedProject = project;
       this.modalVisible = true;
-      document.body.classList.add('modal-open');
-    },
+      this.currentModalType = type;
+          },
     closeModal() {
       console.log('Close modal called');
       this.selectedProject = null;
@@ -179,40 +230,117 @@ section {
   padding-bottom: 1em;
 }
 
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+  color: #ffe8a3;
+}
+
+
 .project-container {
   display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
 }
 
-  div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #86a5d9;
-  }
 
-img {
-    width: 20em;
-    height: 20em;
-    margin-bottom: 0.5em;
-    cursor: pointer;
-  }
-
-img:hover {
-  box-shadow: 5px 5px 4px 3px black;
+.projet-card {
+  background: rgba(20, 20, 40, 0.6);
+  border-radius: 12px;
+  padding: 1rem;
+  flex: 1 1 250px;    
+  max-width: 300px;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+    position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(120, 150, 255, 0.3);
+  box-shadow: 0 0 15px rgba(120, 120, 255, 0.15);
 }
 
-h3 {
-  width: 15em;
+.projet-card::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background: radial-gradient(circle, 
+    rgba(140, 100, 255, 0.25) 0%, 
+    rgba(30, 10, 60, 0) 60%
+  );
+  animation: pulseMagic 4s infinite ease-in-out;
+  transform: scale(0.6);
+  z-index: -1;
+}
+
+.projet-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow:
+    0 0 25px rgba(150, 150, 255, 0.5),
+    0 0 50px rgba(100, 180, 255, 0.3);
+  border-color: rgba(180, 200, 255, 0.9);
+}
+
+@keyframes pulseMagic {
+  0% { opacity: 0.4; transform: scale(0.7);}
+  50% { opacity: 0.8; transform: scale(1);}
+  100% { opacity: 0.4; transform: scale(0.7);}
+}
+
+.projet-card::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    transparent,
+    rgba(200, 200, 255, 0.15),
+    transparent
+  );
+  animation: scan 6s linear infinite;
+}
+
+@keyframes scan {
+  0% { top: -100%; }
+  100% { top: 200%; }
+}
+
+.projet-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.projet-card h3 {
+  margin-top: 0.7rem;
+  font-size: 1.15rem;
   text-align: center;
+  color: #ffe8a3;
 }
 
-h3:hover {
-background:linear-gradient(#582900,#008000) ;
+@media (min-width: 600px) {
+  .projet-card {
+    flex: 1 1 calc(50% - 2rem);  /* 2 par ligne */
+  }
 }
 
+@media (min-width: 900px) {
+  .projet-card {
+    flex: 1 1 calc(33% - 2rem);  /* 3 par ligne */
+  }
+}
+
+@media (min-width: 1200px) {
+  .projet-card {
+    flex: 1 1 calc(25% - 2rem);  /* 4 par ligne */
+  }
+}
+
+/* A faire : mettre image modal assez grand pour etre lisible sans que ca modifie les textes du modal*/
 </style>
 

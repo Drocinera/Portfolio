@@ -26,7 +26,6 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     background: linear-gradient(to top, #5f4bb6 20%, #86a5d9 100%); /*Bleu nuit*/
-    margin-bottom: 1em;
     margin-top: -1em;
     padding-top: 1em;
     position: relative;

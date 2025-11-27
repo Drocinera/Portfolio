@@ -1,58 +1,21 @@
 <template>
   <div class="introduction-div">
-    <pre>Salutation, voyageurs ! 
-        Bienvenu sur mon humble portfolio où se mêle <a @click.prevent="showPortailImage" @click="showMagicalImage" href=#>magie</a> et technologie. 
-        N'ayez crainte, tout a été verifié par de fidèles gobelins qui ont explorés les méandres de cette endroit
-         pour vous assurer un moment paisible et serein. 
-        Ici vous trouverez tout ce qui me concerne : Mes exploits héroïque,
-         Ma passion pour la fantasy, la <a @click.prevent="showPortailImage" @click="showMagicalImage" href=#>magie</a>, <a @click.prevent="showNaturalImage" href="#">la nature</a> et bien évidemment le <a @click.prevent="showTechImage" href="#">développement web et web mobile</a>  ! 
-         Prenez le temps de vérifier chaque recoin de cette endroit, qui sais quel secret vous pourriez découvrir ?</pre>
-         <div class="animation-image-div">
-          <img src="../assets/images/Animation-image/illustration-blue-fire-dragon.jpg" alt="Image magique" class="magical-image" />
-          <img v-if="isNatureImageVisible" src="../assets/images/Animation-image/Iggdrasil-tree.jpg" alt="Image d'arbre" class="nature-image">
-          <img v-if="isTechImageVisible" src="../assets/images/Animation-image/Developpement-web.jpg" alt="image de déveloopement web sur un ordinateur" class="tech-image">
-        </div>
-        <img v-show="isPortalVisible" src="../assets/images/Animation-image/portail-magique-_1_.png" alt="Portail magique--Image by rawpixel.com</a> on Freepik" id="Portail-apparition">
+        <p>Salutation, visiteurs. <br>
+        Je me nomme Pichonneau Théo, développeur web débutant avec un bac+2 en constante apprentissage.<br>
+        Que vous soyez ici par curiosité personnelle ou recherche professionelle , prenez le temps de tout explorer. <br>
+        Vous trouverez plus loin : Mes créations scolaire, personnelle, professionelle, un formulaire de contact et mes réseaux sociaux. <br>
+        Au plaisir de vous revoir dans cette univers qui est le mien. </p>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      isPortalVisible: false,
-      isNatureImageVisible: false,
-      isTechImageVisible: false,
-    };
-  },
-  methods: {
-    showPortailImage() {
-      this.isPortalVisible = true;
-      setTimeout(() => {
-        this.isPortalVisible = false;
-      }, 2000); 
-    },
-    showMagicalImage() {
-      const magicalImage = document.querySelector('.magical-image');
-      magicalImage.style.opacity = '1';
-    },
-    showNaturalImage() {
-      this.isNatureImageVisible = true;
-  },
-  showTechImage() {
-      this.isTechImageVisible = true;
-},
-},
-};
-</script>
-
 <style scoped> 
 
-  pre {
+  p {
     font-family: 'MedievalSharp', cursive;
     text-align: center ;   
-    font-size: 1.25em;
-    color: #111715;
+    font-size: 2em;
+    color: #ffffff;
+text-shadow: 0 0 8px rgba(0,0,0,0.8);
   }
 
   @media only screen and (max-width: 600px) {
@@ -67,85 +30,8 @@ export default {
   }
 
   .introduction-div {
-    height: 341px; 
-    background-color: #86a5d9;
     margin-bottom: 1em;
     padding-top: 1em;
     justify-content: center;
   }
-
-.animation-image-div {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 5em;
-  padding-left: 8em;
-  padding-right: 8em;
-}
-
-.magical-image {
-  opacity: 0;
-}
-
-.nature-image {
-  animation: natureImageAnimation 1s ease-out;
-}
-
-.tech-image {
-  animation: techImageAnimation 1s ease-in-out;
-}
-
-#Portail-apparition {
-  height: 11em;
-  width: 11em;
-  position: relative;
-  left: 5em;
-  bottom: 8em;
-  animation: fadeInOutRotate 2s ease-in-out;
-}
-
-@keyframes fadeInOutRotate {
-  0% {
-    opacity: 0;
-    transform: rotate(0deg); 
-  }
-  50% {
-    opacity: 1;
-    transform: rotate(360deg); 
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(720deg); 
-  }
-}
-
-@keyframes natureImageAnimation {
-  0% {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  50%{
-    transform: translateY(50%);
-    opacity: 0.5;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes techImageAnimation {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.isPortalVisible #Portail-apparition {
-  animation: fadeInOut 2s ease-in-out;
-}
 </style>

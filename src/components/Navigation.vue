@@ -53,6 +53,7 @@ window.addEventListener('scroll', handleScroll);
     nav {
       display: flex;
       flex-direction: row;
+      margin-bottom: 0.5em;
     
     }
     .nav-item {
@@ -61,7 +62,7 @@ window.addEventListener('scroll', handleScroll);
       border: 1px solid #ddd;
       margin: 5px;
       height: min-content;
-      background-color: #111715; /*Couleur Or*/
+
       filter: contrast(200%);
       align-self: flex-end;
     }
