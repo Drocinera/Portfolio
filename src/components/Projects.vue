@@ -183,7 +183,27 @@ export default {
            ],
           Langages: "PHP, Twig. Framework Symfony",
           githubLink: "https://github.com/Drocinera/Symfony_e_commerce.git" },
-// Ajouter Projet final
+
+          { projectTitle:"Projet final 'Knowledge Learning'", 
+          imageSrc:"/src/assets/images/Acceuil_Stubborn.png"  ,
+          title:"Création d'une plateforme E-Learning Fictive pour des formations en ligne avec gestion de payement.",
+          creationDate: "30 Octobre 2024",
+          images: [
+            "src/assets/images/Knowledge_Learning/Page_Acceuil.jpg",
+            "src/assets/images/Knowledge_Learning/Page_inscription.jpg",
+            "src/assets/images/Knowledge_Learning/Page_connexion.jpg",
+            "src/assets/images/Knowledge_Learning/Page_Formation.jpg",
+            "src/assets/images/Knowledge_Learning/Page_formation_connected.jpg",
+            "src/assets/images/Knowledge_Learning/Page_Payement.jpg",
+            "src/assets/images/Knowledge_Learning/Page_Leçon.jpg",
+            "src/assets/images/Knowledge_Learning/Page_Certification.jpg",
+            "src/assets/images/Knowledge_Learning/PAge_acceuil_admin.jpg",
+            "src/assets/images/Knowledge_Learning/Page_utilisateur_admin.jpg",
+            "src/assets/images/Knowledge_Learning/Page_contenu_admin.jpg",
+            "src/assets/images/Knowledge_Learning/Page_Achat_Admin.jpg",
+           ],
+          Langages: "PHP, Twig. Framework Symfony",
+          githubLink: "https://github.com/Drocinera/Knowledge_Learning" },
 
               ],
         projetsProfessionnels: [
